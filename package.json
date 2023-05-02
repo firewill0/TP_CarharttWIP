@@ -1,5 +1,18 @@
 {
   "dependencies": {
-    "parcel-bundler": "^1.12.5"
-  }
+    "parcel-bundler": "^1.12.5",
+    "posthtml": "^0.16.6",
+    "sass-loader": "^13.2.2"
+  },
+  "name": "tp_carharttwip",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
