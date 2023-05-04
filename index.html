@@ -15,6 +15,50 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./scss/main.scss">
+    <link rel="stylesheet" href="./scss/header.scss">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const swiper_slide = document.querySelectorAll('.swiper-slide');
+            const swiper_bullet = document.querySelectorAll('.swiper-pagination-bullet');
+            
+
+            console.log(swiper_slide, swiper_bullet);
+
+            for (let i = 0; i < swiper_slide.length; i++) {
+                let dtaTitle = swiper_slide[i].dataset.title;
+                console.log(dtaTitle);
+                swiper_bullet[i].innerHTML = dtaTitle;
+            }
+
+
+            // let box2arr = document.getElementsByClassName('box02');
+            // let box2 = box2arr[0];
+
+            // box1.style.color = 'blue';
+            // box1.style.fontSize = '24px';
+            // box1.style.fontWeight = 'bold';
+            // document.getElementsByClassName('box02')[0].style.color = 'blue';
+            // document.getElementsByTagName('li')[1].style.color = 'red';
+
+            // document.querySelector('#box01').style.backgroundColor = 'yellow';
+            // document.querySelector('.box02').style.fontSize = '50px';
+            // document.querySelectorAll('.box03 li')[0].style.backgroundColor = 'yellow';
+
+            // const li = document.querySelectorAll('.box03 li');
+
+            // for (let i = 0; i < li.length; i++) {
+            //     li[i].style.fontSize = '28px';
+
+            // }
+
+            // li.forEach((value) => {
+            //     value.style.color = 'blue';
+            // });
+
+        })
+    </script>
 </head>
 
 <body>
@@ -23,9 +67,11 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">Slide 11</div>
-            <div class="swiper-slide">Slide 22</div>
-            <div class="swiper-slide">Slide 33</div>
+            <!-- dataset.title = data-title
+            dataset.name = data-name -->
+            <div class="swiper-slide" data-title="테스트1"><img src="./img/visual_main/1.jpg" alt=""></div>
+            <div class="swiper-slide" data-title="테스트2"><img src="./img/visual_main/2.jpg" alt=""></div>
+            <div class="swiper-slide" data-title="테스트3"><img src="./img/visual_main/3.png" alt=""></div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
