@@ -5,18 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>칼하트윕 온라인 스토어</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="./scss/main.scss">
+    <!-- <link rel="stylesheet" href="./scss/main.scss"> -->
     <link rel="stylesheet" href="./scss/header.scss">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
     <script>
+
+
         document.addEventListener('DOMContentLoaded', function () {
+
+
 
             const swiper_slide = document.querySelectorAll('.swiper-slide');
             const swiper_bullet = document.querySelectorAll('.swiper-pagination-bullet');
-            
 
             console.log(swiper_slide, swiper_bullet);
 
@@ -26,6 +36,68 @@
                 swiper_bullet[i].innerHTML = dtaTitle;
             }
 
+            let lnbHover = false;
+            let lnbListHover = false;
+
+            const lnb_hover = document.querySelectorAll('.lnb_hover');
+            console.log("lnb_hover:", lnb_hover);
+            const lnbList = document.querySelector('.lnb_menu');
+
+            const lnb_img1 = document.querySelector('.lnb_img1');
+
+            const lnb_img2 = document.querySelector('.lnb_img2');
+
+            for (let i = 0; i < lnb_hover.length; i++) {
+                console.log(i);
+                lnb_hover[i].addEventListener('mouseover', function () {
+                    let num = i;
+                    lnbHover = true;
+                    console.log(lnbHover, lnbListHover);
+                    fnc_lnb(lnbHover, lnbListHover);
+                    let img_path1 = "/img/lnb_img/" + i + "/1.jpg";
+                    let img_path2 = "/img/lnb_img/" + i + "/2.jpg";
+
+                    // lnb_img1.setAttribute('src',img_path1);
+                    // lnb_img2.setAttribute('src',img_path2);
+
+                });
+
+                lnb_hover[i].addEventListener('mouseout', function () {
+                    lnbHover = false;
+                    console.log(lnbHover, lnbListHover);
+                    fnc_lnb(lnbHover, lnbListHover);
+                });
+            }
+
+            lnbList.addEventListener('mouseover', function () {
+                lnbListHover = true;
+                console.log(lnbHover, lnbListHover);
+                fnc_lnb(lnbHover, lnbListHover);
+            });
+            lnbList.addEventListener('mouseout', function () {
+                lnbListHover = false;
+                console.log(lnbHover, lnbListHover);
+
+                fnc_lnb(lnbHover, lnbListHover);
+            });
+
+            function fnc_lnb(check1, check2) {
+                if (check1 || check2) {
+                    lnbList.style.height = "400px";
+                    lnbList.style.borderBottom = "1px solid #ccc";
+                    console.log('lnb open');
+                } else {
+                    lnbList.style.height = "0px";
+                    lnbList.style.borderBottom = "1px solid black";
+                    console.log('lnb close');
+                }
+            }
+
+
+
+
+            // lnbList.style.height = "400px";
+            // lnbList.style.height = "0px";
 
             // let box2arr = document.getElementsByClassName('box02');
             // let box2 = box2arr[0];
