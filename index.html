@@ -16,13 +16,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-
-
+    <script src="./js/lnb_img.js" type="module"></script>
     <script>
-
-
         document.addEventListener('DOMContentLoaded', function () {
-
 
 
             const swiper_slide = document.querySelectorAll('.swiper-slide');
@@ -35,66 +31,6 @@
                 console.log(dtaTitle);
                 swiper_bullet[i].innerHTML = dtaTitle;
             }
-
-            let lnbHover = false;
-            let lnbListHover = false;
-
-            const lnb_hover = document.querySelectorAll('.lnb_hover');
-            console.log("lnb_hover:", lnb_hover);
-            const lnbList = document.querySelector('.lnb_menu');
-
-            const lnb_img1 = document.querySelector('.lnb_img1');
-
-            const lnb_img2 = document.querySelector('.lnb_img2');
-
-            for (let i = 0; i < lnb_hover.length; i++) {
-                console.log(i);
-                lnb_hover[i].addEventListener('mouseover', function () {
-                    let num = i;
-                    lnbHover = true;
-                    console.log(lnbHover, lnbListHover);
-                    fnc_lnb(lnbHover, lnbListHover);
-                    let img_path1 = "/img/lnb_img/" + i + "/1.jpg";
-                    let img_path2 = "/img/lnb_img/" + i + "/2.jpg";
-
-                    // lnb_img1.setAttribute('src',img_path1);
-                    // lnb_img2.setAttribute('src',img_path2);
-
-                });
-
-                lnb_hover[i].addEventListener('mouseout', function () {
-                    lnbHover = false;
-                    console.log(lnbHover, lnbListHover);
-                    fnc_lnb(lnbHover, lnbListHover);
-                });
-            }
-
-            lnbList.addEventListener('mouseover', function () {
-                lnbListHover = true;
-                console.log(lnbHover, lnbListHover);
-                fnc_lnb(lnbHover, lnbListHover);
-            });
-            lnbList.addEventListener('mouseout', function () {
-                lnbListHover = false;
-                console.log(lnbHover, lnbListHover);
-
-                fnc_lnb(lnbHover, lnbListHover);
-            });
-
-            function fnc_lnb(check1, check2) {
-                if (check1 || check2) {
-                    lnbList.style.height = "400px";
-                    lnbList.style.borderBottom = "1px solid #ccc";
-                    console.log('lnb open');
-                } else {
-                    lnbList.style.height = "0px";
-                    lnbList.style.borderBottom = "1px solid black";
-                    console.log('lnb close');
-                }
-            }
-
-
-
 
             // lnbList.style.height = "400px";
             // lnbList.style.height = "0px";
