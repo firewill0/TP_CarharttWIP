@@ -13,7 +13,6 @@ const lnb_img2 = document.querySelector('.lnb_img2');
 for (let i = 0; i < lnb_hover.length; i++) {
     console.log(i);
     lnb_hover[i].addEventListener('mouseover', function () {
-        let num = i;
         lnbHover = true;
         console.log(lnbHover, lnbListHover);
         fnc_lnb(lnbHover, lnbListHover);

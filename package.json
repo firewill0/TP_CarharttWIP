@@ -10,8 +10,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html",
-    "start": "parcel index.html"
+    "build": "parcel build index.html --public-url ./",
+    "start": "parcel index.html",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "keywords": [],
   "author": "",
