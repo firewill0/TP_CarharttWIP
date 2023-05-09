@@ -8,8 +8,9 @@
     <title>칼하트윕 온라인 스토어</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- <link rel="stylesheet" href="./scss/main.scss"> -->
+    <link rel="stylesheet" href="./scss/main.scss">
     <link rel="stylesheet" href="./scss/header.scss">
+    <link rel="stylesheet" href="./scss/footer.scss">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,6 +87,58 @@
         <div class="swiper-scrollbar"></div>
     </div>
 
+    <section class="section_best section">
+        <div class="title_section">Best Product
+        </div>
+        <div class="list_best list_section">best product
+
+        </div>
+    </section>
+
+    <section class="section_new section">
+        <div class="title_section">New Product
+        </div>
+        <div class="list_new list_section">new product
+
+        </div>
+    </section>
+
+    <section class="section_lookbook">
+        <div class="title_section">LOOK BOOK - S/S 2023
+        </div>
+        <div class="lookbook_top">
+            <div class="lb_t_l">
+                ad
+            </div>
+            <div class="lb_t_r">
+                <div class="lb_t_r_t">top</div>
+                <div class="lb_t_r_l">left</div>
+                <div class="lb_t_r_r">right</div>
+            </div>
+        </div>
+        <div class="lookbook_display">
+            lookbook_display
+        </div>
+    </section>
+
+    <section class="section_md section">
+        <div class="title_section">MD's Pick
+        </div>
+        <div class="list_md list_section">md's pick
+
+        </div>
+    </section>
+
+    <section class="section_insta section">
+        <div class="title_section">Instagram
+        </div>
+        <div class="list_insta list_section">Instagram
+
+        </div>
+    </section>
+
+    <include src="./parts/footer.html"></include>
+
     <script>
         const swiper = new Swiper('.swiper', {
             // Optional parameters
@@ -95,6 +148,7 @@
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
+                clickable:true
             },
 
             // Navigation arrows

@@ -1,0 +1,132 @@
+@import url(./main.scss);
+
+$headerFont:white;
+$HBC:black;
+$headerAC:white;
+$realsmallfns:10px;
+$smallfns1:12px;
+$smallfns2:14px;
+$standardfns:16px;
+$subtitle:20px;
+$maintitle:24px;
+
+.footer_out_top {
+    width: 1245px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+
+    &>a {
+        display: block;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: -70px;
+            top: 5px;
+            width: 1px;
+            height: 16px;
+            background-color: black;
+
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+
+.footer_outer {
+    width: 100%;
+    background-color: $HBC;
+
+    & .footer {
+        color: white;
+        width: 1245px;
+        height: 330px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 5px;
+
+        & .footer_top {
+            overflow: hidden;
+
+            & .footer_top_left {
+                float: left;
+                overflow: hidden;
+
+                &>a {
+                    font-size: 12px;
+                    font-weight: 400;
+                    float: left;
+                    display: block;
+                    color: white;
+                    margin-right: 30px;
+                    margin-top: 15px;
+                }
+            }
+
+            & .footer_top_right {
+
+                float: right;
+                overflow: hidden;
+
+                &>a {
+                    display: block;
+                    float: left;
+                    width: 30px;
+                    height: 30px;
+                    margin-top: 10px;
+                    margin-left: 30px;
+                }
+            }
+        }
+
+        & .footer_mid {
+            margin-top: 50px;
+            overflow: hidden;
+            margin-bottom: 45px;
+
+            & .footer_mid_left {
+                float: left;
+                font-size: 14px;
+                line-height: 28px;
+            }
+
+            & .footer_mid_right {
+                float: right;
+                line-height: 32px;
+
+                &>p {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &>.footer_mid_title {
+                        font-weight: 500;
+                        display: block;
+                        margin-right: 15px;
+                    }
+
+                    &>.footer_mid_desc {
+                        font-size: 14px;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        & .footer_bottom {
+            font-size: 14px;
+            display: flex;
+            color: white;
+            &>a {
+                color: white;
+                margin-left: 60px;
+            }
+        }
+    }
+}
