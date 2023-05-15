@@ -1,14 +1,183 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carhartt WIP - TOP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./scss/main.scss">
+    <link rel="stylesheet" href="./scss/sub.scss">
+    <link rel="stylesheet" href="./scss/header.scss">
+    <link rel="stylesheet" href="./scss/footer.scss">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="./js/lnb_img.js" type="module"></script>
 </head>
+
 <body>
     <include src="./parts/header.html"></include>
-
+    <div class="visual_sub">
+        <div class="visual_sub_img top"></div>
+        <div class="visual_sub_box">
+            <div class="visual_sub_txtbox">
+                <p class="title">TOP</p>
+                <p class="description">
+                    봄~여름에 어울리는 다양한 패턴과 소재로 제작된 상의, 이번 시즌에는 놓치지 마세요!
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="section_subpage">
+        <div class="subpage_left">
+            <div class="subpage_title">
+                TOP
+            </div>
+            <div class="subpage_left_cat">
+                <a href="#">전체</a>
+                <a href="#">자켓</a>
+                <a href="#">스웨터</a>
+                <a href="#">니트</a>
+                <a href="#">셔츠</a>
+                <a href="#">티셔츠</a>
+                <div class="line"></div>
+            </div>
+            <div class="subpage_left_filter">
+                <div class="filter_price filter_tab">
+                    <p>가격</p>
+                    <label for="chk_price_1"> <input type="checkbox" name="chk_price_1" class="checkbox_price"
+                            id="chk_price_1"> 0원~50,000원
+                    </label>
+                    <label for="chk_price_2"> <input type="checkbox" name="chk_price_2" class="checkbox_price"
+                            id="chk_price_2"> 50,000원 ~ 150,000원
+                    </label>
+                    <label for="chk_price_3"> <input type="checkbox" name="chk_price_3" class="checkbox_price"
+                            id="chk_price_3"> 150,000원 ~ 250,000원
+                    </label>
+                    <label for="chk_price_4"> <input type="checkbox" name="chk_price_4" class="checkbox_price"
+                            id="chk_price_4"> 250,000원 ~ 500,000원
+                    </label>
+                    <label for="chk_price_5"> <input type="checkbox" name="chk_price_5" class="checkbox_price"
+                            id="chk_price_5"> 500,000원 ~
+                    </label>
+                </div>
+                <div class="filter_color filter_tab">
+                    <p>색상</p>
+                    <label class="color_black" for="chk_color_1"><input type="checkbox" name="chk_color_1"
+                            class="checkbox_color" id="chk_color_1">
+                    </label>
+                    <label for="chk_color_2" class="color_blue"> <input type="checkbox" name="chk_color_2"
+                            class="checkbox_price" id="chk_color_2">
+                    </label>
+                    <label for="chk_color_3" class="color_red"> <input type="checkbox" name="chk_color_3"
+                            class="checkbox_price" id="chk_color_3">
+                    </label>
+                    <label for=chk_color_4" class="color_yellow"> <input type="checkbox" name="chk_color_4"
+                            class="checkbox_price" id="chk_color_4">
+                    </label>
+                    <label for="chk_color_5" class="color_green"> <input type="checkbox" name="chk_color_5"
+                            class="checkbox_price" id="chk_color_5">
+                    </label>
+                    <label for="chk_color_6" class="color_magenta"> <input type="checkbox" name="chk_color_6"
+                            class="checkbox_price" id="chk_color_6">
+                    </label>
+                    <label for="chk_color_7" class="color_white"><input type="checkbox" name="chk_color_7"
+                            class="checkbox_color" id="chk_color_7">
+                    </label>
+                    <label for="chk_color_8" class="color_grey"> <input type="checkbox" name="chk_color_8"
+                            class="checkbox_price" id="chk_color_8">
+                    </label>
+                    <label for="chk_color_9" class="color_pink"> <input type="checkbox" name="chk_color_9"
+                            class="checkbox_price" id="chk_color_9">
+                    </label>
+                    <label for=chk_color_10" class="color_darkorange"> <input type="checkbox" name="chk_color_10"
+                            class="checkbox_price" id="chk_color_10">
+                    </label>
+                    <label for="chk_color_11" class="color_lightgrey"> <input type="checkbox" name="chk_color_11"
+                            class="checkbox_price" id="chk_color_11">
+                    </label>
+                    <label for="chk_color_12" class="color_orange"> <input type="checkbox" name="chk_color_12"
+                            class="checkbox_price" id="chk_color_12">
+                    </label>
+                    <label for="chk_color_13" class="color_limegreen"> <input type="checkbox" name="chk_color_13"
+                            class="checkbox_price" id="chk_color_13">
+                    </label>
+                    <label for="chk_color_14" class="color_darkblue"> <input type="checkbox" name="chk_color_14"
+                            class="checkbox_price" id="chk_color_14">
+                    </label>
+                </div>
+                <div class="filter_discount filter_tab">
+                    <p>할인율</p>
+                    <label for="chk_discount_1">
+                        <input type="checkbox" name="chk_discount_1" class="checkbox_discount" id="chk_discount_1">
+                        0%~30%
+                    </label>
+                    <label for="chk_discount_2">
+                        <input type="checkbox" name="chk_discount_2" class="checkbox_price" id="chk_discount_2">
+                        30%~50%
+                    </label>
+                    <label for="chk_discount_3">
+                        <input type="checkbox" name="chk_discount_3" class="checkbox_price" id="chk_discount_3">
+                        50%~70%
+                    </label>
+                    <label for="chk_discount_4">
+                        <input type="checkbox" name="chk_discount_4" class="checkbox_price" id="chk_discount_4">
+                        70% 이상
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="subpage_right">
+            <div class="subpage_right_top">
+                <div class="gender_cat">
+                    <div class="cat_male">남성</div>
+                    <div class="cat_female">여성</div>
+                    <div class="cat_all">All</div>
+                </div>
+                <div class="sort_options">
+                    <label class="label_chk_soldout" for="chk_soldout">
+                        품절상품 제외
+                        <input type="checkbox" class="chk_soldout" name="chk_soldout" id="chk_soldout">
+                    </label>
+                    <select name="sel_sort" id="sel_sort">
+                        <option value="">선택</option>
+                        <option value="new">신상품순</option>
+                        <option value="best">인기순</option>
+                        <option value="low">가격낮은순</option>
+                        <option value="high">가격높은순</option>
+                    </select>
+                    <label class="label_chk_filter" for="chk_filter">
+                        <p>필터</p>
+                        <input type="checkbox" name="chk_filter" id="chk_filter">
+                        <div class="filter_box">
+                            <div class="filter_circle"></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="items_list">
+                <div class="item">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="box_page">
+                <button type="button"><<</button>
+                <button type="button"><</button>
+                <div class="pagination">
+                    <div class="page_btn">1</div>
+                </div>
+                <button type="button">></button>
+                <button type="button">>></button>
+            </div>
+        </div>
+    </section>
     <include src="./parts/footer.html"></include>
 </body>
+
 </html>
