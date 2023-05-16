@@ -8,7 +8,7 @@
   },
   "name": "tp_carharttwip",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html --public-url ./",
