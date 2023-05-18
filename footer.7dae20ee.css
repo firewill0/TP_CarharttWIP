@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-size: 16px;
+  font-weight: 200;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #FFFDF6;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.title_section {
+  font-size: 24px;
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.swiper {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 90px;
+}
+
+.swiper-pagination-bullet {
+  width: 150px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  color: #bbb;
+  background: none;
+  opacity: 1;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  color: blue;
+}
+
+.swiper-wrapper {
+  height: 94%;
+}
+
+.swiper-slide > img {
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  width: 1245px;
+  margin: 0 auto;
+  margin-bottom: 90px;
+}
+.section .list_section {
+  width: 100%;
+  height: 275px;
+  background-color: yellow;
+}
+.section .list_md {
+  height: 400px;
+}
+.section .list_insta {
+  height: 300px;
+}
+
+.section_lookbook {
+  box-sizing: border-box;
+  padding-top: 15px;
+  width: 100%;
+  height: 1400px;
+  background-color: azure;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin-bottom: 90px;
+}
+.section_lookbook .lookbook_top {
+  width: 1245px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.section_lookbook .lookbook_top > div {
+  width: 615px;
+  height: 615px;
+  background-color: yellowgreen;
+}
+.section_lookbook .lookbook_top > .lb_t_r {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.section_lookbook .lookbook_top > .lb_t_r > div {
+  width: 300px;
+  height: 300px;
+}
+.section_lookbook .lookbook_top > .lb_t_r .lb_t_r_t {
+  width: 615px;
+  background-color: blue;
+}
+.section_lookbook .lookbook_top > .lb_t_r .lb_t_r_l {
+  background-color: darkgray;
+}
+.section_lookbook .lookbook_top > .lb_t_r .lb_t_r_r {
+  background-color: burlywood;
+}
+.section_lookbook .lookbook_display {
+  width: 1245px;
+  height: 670px;
+  margin: 0 auto;
+  background-color: cornflowerblue;
+  margin-bottom: 15px;
+}
+.footer_out_top {
+  width: 1245px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.footer_out_top > a {
+  display: block;
+  position: relative;
+}
+.footer_out_top > a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -70px;
+  top: 5px;
+  width: 1px;
+  height: 16px;
+  background-color: black;
+}
+.footer_out_top > a:last-child::after {
+  display: none;
+}
+
+.footer_outer {
+  width: 100%;
+  background-color: black;
+}
+.footer_outer .footer {
+  color: white;
+  width: 1245px;
+  height: 330px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.footer_outer .footer .footer_top {
+  overflow: hidden;
+}
+.footer_outer .footer .footer_top .footer_top_left {
+  float: left;
+  overflow: hidden;
+}
+.footer_outer .footer .footer_top .footer_top_left > a {
+  font-size: 12px;
+  font-weight: 400;
+  float: left;
+  display: block;
+  color: white;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+.footer_outer .footer .footer_top .footer_top_right {
+  float: right;
+  overflow: hidden;
+}
+.footer_outer .footer .footer_top .footer_top_right > a {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.footer_outer .footer .footer_mid {
+  margin-top: 50px;
+  overflow: hidden;
+  margin-bottom: 45px;
+}
+.footer_outer .footer .footer_mid .footer_mid_left {
+  float: left;
+  font-size: 14px;
+  line-height: 28px;
+}
+.footer_outer .footer .footer_mid .footer_mid_right {
+  float: right;
+  line-height: 32px;
+}
+.footer_outer .footer .footer_mid .footer_mid_right > p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_outer .footer .footer_mid .footer_mid_right > p > .footer_mid_title {
+  font-weight: 500;
+  display: block;
+  margin-right: 15px;
+}
+.footer_outer .footer .footer_mid .footer_mid_right > p > .footer_mid_desc {
+  font-size: 14px;
+  display: block;
+}
+.footer_outer .footer .footer_bottom {
+  font-size: 14px;
+  display: flex;
+  color: white;
+}
+.footer_outer .footer .footer_bottom > a {
+  color: white;
+  margin-left: 60px;
+}
+
+/*# sourceMappingURL=/footer.7dae20ee.css.map */
