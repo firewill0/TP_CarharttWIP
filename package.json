@@ -15,6 +15,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://firewill0.github.io/TP_CarharttWIP",
   "keywords": [],
   "author": "",
   "license": "ISC",
