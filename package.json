@@ -11,7 +11,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html --public-url ./",
+    "build": "parcel build index.html --public-url ./ --no-content-hash",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

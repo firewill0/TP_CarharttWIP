@@ -72,16 +72,43 @@
             <!-- Slides -->
             <!-- dataset.title = data-title
             dataset.name = data-name -->
-            <div class="swiper-slide" data-title="테스트1"><img src="./img/visual_main/1.jpg" alt=""></div>
-            <div class="swiper-slide" data-title="테스트2"><img src="./img/visual_main/2.jpg" alt=""></div>
-            <div class="swiper-slide" data-title="테스트3"><img src="./img/visual_main/3.png" alt=""></div>
+            <div class="swiper-slide" data-title="23:썸머 아이템">
+                <img src="./img/visual_main/summer.jpg" alt="vm_summer">
+                <div class="backplate"></div>
+                <p>23:썸머 아이템</p>
+                <a href="#">보러 가기</a>
+            </div>
+            <div class="swiper-slide" data-title="23: 여름 스타일 가이드">
+                <img src="./img/visual_main/summer2.jpg" alt="vm_summer2">
+                <div class="backplate"></div>
+                <p>23: 여름 스타일 가이드</p>
+                <a href="#">보러 가기</a>
+            </div>
+            <div class="swiper-slide" data-title="S/S23: ‘Frontier'">
+                <img src="./img/visual_main/1.jpg" alt="vm_frontier">
+                <div class="backplate"></div>
+                <p>S/S23: 'Frontier'</p>
+                <a href="#">보러 가기</a>
+            </div>
+            <div class="swiper-slide" data-title="S/S23: Icons Reworked">
+                <img src="./img/visual_main/2.jpg" alt="">
+                <div class="backplate"></div>
+                <p>S/S23: Icons Reworked</p>
+                <a href="#">보러 가기</a>
+            </div>
+            <div class="swiper-slide" data-title="S/S 23: Store Exclusives">
+                <img src="./img/visual_main/3.png" alt="">
+                <div class="backplate"></div>
+                <p>S/S 23: Store Exclusives</p>
+                <a href="#">보러 가기</a>
+            </div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
 
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev vm_btns"></div>
+        <div class="swiper-button-next vm_btns"></div>
 
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
@@ -148,7 +175,7 @@
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
-                clickable:true
+                clickable: true
             },
 
             // Navigation arrows
@@ -160,7 +187,12 @@
             // And if we need scrollbar
             scrollbar: {
                 el: '.swiper-scrollbar',
+                enabled: false,
             },
+            // autoplay: {
+            //     delay: 5000,
+            //     pauseOnMouseEnter: true,
+            // },
         });
     </script>
 

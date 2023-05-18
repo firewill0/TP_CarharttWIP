@@ -43,31 +43,112 @@ img {
     height: 500px;
     margin: 0 auto;
     margin-bottom: 90px;
-}
 
-.swiper-pagination-bullet {
-    width: 150px;
-    height: 20px;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: left;
-    color: #bbb;
-    background: none;
-    opacity: 1;
+    .swiper-pagination-bullet {
+        width: 150px;
+        height: 20px;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: left;
+        color: #bbb;
+        background: none;
+        opacity: 1;
 
-    &.swiper-pagination-bullet-active {
-        color: blue;
+        &.swiper-pagination-bullet-active {
+            color: blue;
+        }
     }
+
+    .vm_btns::after {
+        font-weight: bold;
+        color: #4136BF;
+    }
+
+
+    .swiper-wrapper {
+        height: 94%;
+
+        .swiper-slide {
+            position: relative;
+            transition: 0.25s;
+
+            &>img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &>.backplate {
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: rgba(#000, 0.3);
+                width: 100%;
+                height: 100%;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.28s;
+            }
+
+            &>p {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 40%;
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+                text-shadow: 3px 3px 10px black;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s;
+            }
+
+            &>a {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 50px;
+                width: 182px;
+                height: 57px;
+                background-color: #FFBF00;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 57px;
+                font-size: 20px;
+                font-weight: 400;
+                color: #333;
+                box-shadow: 3px 3px 15px black;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+
+        .swiper-slide:hover {
+
+            &>.backplate {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            &>p {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            &>a {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+
 }
 
-.swiper-wrapper {
-    height: 94%;
-}
 
-.swiper-slide>img {
-    width: 100%;
-    height: 100%;
-}
+
+
 
 .section {
     width: 1245px;
