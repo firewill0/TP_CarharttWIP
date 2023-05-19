@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="./scss/main.scss">
     <link rel="stylesheet" href="./scss/header.scss">
     <link rel="stylesheet" href="./scss/footer.scss">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,8 +24,13 @@
         document.addEventListener('DOMContentLoaded', function () {
 
 
-            const swiper_slide = document.querySelectorAll('.swiper-slide');
-            const swiper_bullet = document.querySelectorAll('.swiper-pagination-bullet');
+
+            const swiper_vm = document.querySelector('.swiper-wrapper-vm');
+            const swiper_slide = swiper_vm.querySelectorAll('.swiper-slide');
+
+            const swiper_bullet_vm = document.querySelector('.sp-vm');
+
+            const swiper_bullet = swiper_bullet_vm.querySelectorAll('.swiper-pagination-bullet');
 
             console.log(swiper_slide, swiper_bullet);
 
@@ -66,37 +73,37 @@
 
 <body>
     <include src="./parts/header.html"></include>
-    <div class="swiper">
+    <div class="swiper swiper-vm">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper swiper-wrapper-vm">
             <!-- Slides -->
             <!-- dataset.title = data-title
             dataset.name = data-name -->
-            <div class="swiper-slide" data-title="23:썸머 아이템">
+            <div class="swiper-slide swiper-slide-vm" data-title="23:썸머 아이템">
                 <img src="./img/visual_main/summer.jpg" alt="vm_summer">
                 <div class="backplate"></div>
                 <p>23:썸머 아이템</p>
                 <a href="#">보러 가기</a>
             </div>
-            <div class="swiper-slide" data-title="23: 여름 스타일 가이드">
+            <div class="swiper-slide swiper-slide-vm" data-title="23: 여름 스타일 가이드">
                 <img src="./img/visual_main/summer2.jpg" alt="vm_summer2">
                 <div class="backplate"></div>
                 <p>23: 여름 스타일 가이드</p>
                 <a href="#">보러 가기</a>
             </div>
-            <div class="swiper-slide" data-title="S/S23: ‘Frontier'">
+            <div class="swiper-slide swiper-slide-vm" data-title="S/S23: ‘Frontier'">
                 <img src="./img/visual_main/1.jpg" alt="vm_frontier">
                 <div class="backplate"></div>
                 <p>S/S23: 'Frontier'</p>
                 <a href="#">보러 가기</a>
             </div>
-            <div class="swiper-slide" data-title="S/S23: Icons Reworked">
+            <div class="swiper-slide swiper-slide-vm" data-title="S/S23: Icons Reworked">
                 <img src="./img/visual_main/2.jpg" alt="">
                 <div class="backplate"></div>
                 <p>S/S23: Icons Reworked</p>
                 <a href="#">보러 가기</a>
             </div>
-            <div class="swiper-slide" data-title="S/S 23: Store Exclusives">
+            <div class="swiper-slide swiper-slide-vm" data-title="S/S 23: Store Exclusives">
                 <img src="./img/visual_main/3.png" alt="">
                 <div class="backplate"></div>
                 <p>S/S 23: Store Exclusives</p>
@@ -104,30 +111,165 @@
             </div>
         </div>
         <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination sp-vm"></div>
 
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev vm_btns"></div>
-        <div class="swiper-button-next vm_btns"></div>
+        <div class="swiper-button-prev sbp-vm vm_btns"></div>
+        <div class="swiper-button-next sbn-vm vm_btns"></div>
 
         <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper-scrollbar sscroll-vm"></div>
     </div>
 
     <section class="section_best section">
         <div class="title_section">Best Product
         </div>
-        <div class="list_best list_section">best product
+        <div class="swiper list_best list_section">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper sw-best">
+                <!-- Slides -->
+                <!-- dataset.title = data-title
+            dataset.name = data-name -->
+                <div class="swiper-slide swiper-slide-best">
+                    <span>Best 1</span>
+                    <img src="./img/best/best_1.jpg" alt="best1img">
+                    <div class="backplate"></div>
+                    <p>S/S LIFEGUARDS T-SHIRT BLACK</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-best">
+                    <span>Best 2</span>
+                    <img src="./img/best/best_2.jpg" alt="best2img">
+                    <div class="backplate"></div>
+                    <p>CLOVER SHORT LANE
+                        BLACK STONE WASHED</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-best">
+                    <span>Best 3</span>
+                    <img src="./img/best/best_3.jpg" alt="best3img">
+                    <div class="backplate"></div>
+                    <p>COASTAL JACKET
+                        WHITE/BLACK</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-best"> <span>Best 4</span>
+                    <img src="./img/best/best_4.jpg" alt="best4img">
+                    <div class="backplate"></div>
+                    <p>COASTAL PANT
+                        BLACK/WHITE</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-best">
+                    <span>Best 5</span>
+                    <img src="./img/best/best_5.jpg" alt="best5img">
+                    <div class="backplate"></div>
+                    <p>W S/S LOVILIA SHIRT
+                        BLUE STONE WASHED</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-best">
+                    <span>Best 6</span>
+                    <img src="./img/best/best_6.jpg" alt="best5img">
+                    <div class="backplate"></div>
+                    <p>W MASTER SKIRT
+                        LUPINUS RINSED</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-best">
+                    <span>Best 7</span>
+                    <img src="./img/best/best_7.jpg" alt="best5img">
+                    <div class="backplate"></div>
+                    <p>W SALEDO JACKET
+                        LAZURITE GARMENT DYED</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-best">
+                    <span>Best 8</span>
+                    <img src="./img/best/best_8.jpg" alt="best5img">
+                    <div class="backplate"></div>
+                    <p>W S/S BLUSH T-SHIRT
+                        LAZURITE</p>
+                    <a href="#">보러 가기</a>
+                </div>
+            </div>
 
         </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev sbp-best"></div>
+        <div class="swiper-button-next sbn-best"></div>
     </section>
 
     <section class="section_new section">
         <div class="title_section">New Product
         </div>
-        <div class="list_new list_section">new product
+        <div class="swiper list_new list_section">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper sw-new">
+                <!-- Slides -->
+                <!-- dataset.title = data-title
+            dataset.name = data-name -->
+                <div class="swiper-slide swiper-slide-new">
+                    <img src="./img/best/best_1.jpg" alt="best1img">
+                    <div class="backplate"></div>
+                    <p>S/S LIFEGUARDS T-SHIRT BLACK</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-new">
+                    <img src="./img/best/best_2.jpg" alt="best2img">
+                    <div class="backplate"></div>
+                    <p>CLOVER SHORT LANE
+                        BLACK STONE WASHED</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-new">
+                    <img src="./img/best/best_3.jpg" alt="best3img">
+                    <div class="backplate"></div>
+                    <p>COASTAL JACKET
+                        WHITE/BLACK</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-new">
+                    <img src="./img/best/best_4.jpg" alt="best4img">
+                    <div class="backplate"></div>
+                    <p>COASTAL PANT
+                        BLACK/WHITE</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-new">
+                    <img src="./img/best/best_5.jpg" alt="best5img">
+                    <div class="backplate"></div>
+                    <p>W S/S LOVILIA SHIRT
+                        BLUE STONE WASHED</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-new">
+                    <img src="./img/best/best_6.jpg" alt="best5img">
+                    <div class="backplate"></div>
+                    <p>W MASTER SKIRT
+                        LUPINUS RINSED</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-new">
+                    <img src="./img/best/best_7.jpg" alt="best5img">
+                    <div class="backplate"></div>
+                    <p>W SALEDO JACKET
+                        LAZURITE GARMENT DYED</p>
+                    <a href="#">보러 가기</a>
+                </div>
+                <div class="swiper-slide  swiper-slide-new">
+                    <img src="./img/best/best_8.jpg" alt="best5img">
+                    <div class="backplate"></div>
+                    <p>W S/S BLUSH T-SHIRT
+                        LAZURITE</p>
+                    <a href="#">보러 가기</a>
+                </div>
+            </div>
 
         </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev sbp-new"></div>
+        <div class="swiper-button-next sbn-new"></div>
     </section>
 
     <section class="section_lookbook">
@@ -135,12 +277,16 @@
         </div>
         <div class="lookbook_top">
             <div class="lb_t_l">
-                ad
+                <img src="./img/lookbook/lookbook_thumb_1.jpg" alt="lb_thumb_1">
             </div>
             <div class="lb_t_r">
-                <div class="lb_t_r_t">top</div>
-                <div class="lb_t_r_l">left</div>
-                <div class="lb_t_r_r">right</div>
+                <div class="lb_t_r_t"><iframe width="615" height="300"
+                        src="https://www.youtube.com/embed/eE5SJTZ4XtU?controls=0" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe></div>
+                <div class="lb_t_r_l"> <img src="./img/lookbook/lookbook_thumb_2.jpg" alt="lb_thumb_2"></div>
+                <div class="lb_t_r_r">                <img src="./img/lookbook/lookbook_thumb_3.jpg" alt="lb_thumb_3"></div>
             </div>
         </div>
         <div class="lookbook_display">
@@ -167,7 +313,7 @@
     <include src="./parts/footer.html"></include>
 
     <script>
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.swiper-vm', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
@@ -189,6 +335,70 @@
                 el: '.swiper-scrollbar',
                 enabled: false,
             },
+            // autoplay: {
+            //     delay: 5000,
+            //     pauseOnMouseEnter: true,
+            // },
+        });
+
+        const swiper_best = new Swiper('.list_best', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 15,
+            autoHeight: false,
+
+            // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            //     clickable: true
+            // },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.sbn-best',
+                prevEl: '.sbp-best',
+            },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            //     enabled: false,
+            // },
+            // autoplay: {
+            //     delay: 5000,
+            //     pauseOnMouseEnter: true,
+            // },
+        });
+
+        const swiper_new = new Swiper('.list_new', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 15,
+            autoHeight: false,
+
+            // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            //     clickable: true
+            // },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.sbn-new',
+                prevEl: '.sbp-new',
+            },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            //     enabled: false,
+            // },
             // autoplay: {
             //     delay: 5000,
             //     pauseOnMouseEnter: true,

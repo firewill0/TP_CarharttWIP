@@ -38,7 +38,7 @@ img {
     margin-bottom: 30px;
 }
 
-.swiper {
+.swiper-vm {
     width: 100%;
     height: 500px;
     margin: 0 auto;
@@ -65,7 +65,7 @@ img {
     }
 
 
-    .swiper-wrapper {
+    .swiper-wrapper-vm {
         height: 94%;
 
         .swiper-slide {
@@ -143,7 +143,6 @@ img {
         }
     }
 
-
 }
 
 
@@ -154,6 +153,46 @@ img {
     width: 1245px;
     margin: 0 auto;
     margin-bottom: 90px;
+
+    &.section_best {
+        position: relative;
+
+        .swiper-button-prev {
+            left: var(--swiper-navigation-sides-offset, -45px);
+
+            &::after {
+                color: black;
+            }
+        }
+
+        .swiper-button-next {
+            right: var(--swiper-navigation-sides-offset, -45px);
+
+            &::after {
+                color: black;
+            }
+        }
+    }
+
+    &.section_new {
+        position: relative;
+
+        .swiper-button-prev {
+            left: var(--swiper-navigation-sides-offset, -45px);
+
+            &::after {
+                color: black;
+            }
+        }
+
+        .swiper-button-next {
+            right: var(--swiper-navigation-sides-offset, -45px);
+
+            &::after {
+                color: black;
+            }
+        }
+    }
 
 
     & .list_section {
@@ -171,6 +210,212 @@ img {
         height: 300px;
 
     }
+
+    &>.list_best {
+        width: 100%;
+
+
+        &>.sw-best {
+            & .swiper-slide {
+                width: 300px;
+
+                position: relative;
+                transition: 0.25s;
+
+                &>img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &>.backplate {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(#000, 0.3);
+                    width: 100%;
+                    height: 100%;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.28s;
+                }
+
+                &>span {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 45px;
+                    height: 45px;
+                    background-color: #FFBF00;
+                    text-align: center;
+                    font-weight: bold;
+                    line-height: 21px;
+                    z-index: 15;
+                }
+
+                &>p {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 40%;
+                    color: white;
+                    font-size: 12px;
+                    font-weight: 300;
+                    text-shadow: 3px 3px 10px black;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.3s;
+                    text-align: center;
+                }
+
+                &>a {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 50px;
+                    width: 105px;
+                    height: 35px;
+                    background-color: #FFBF00;
+                    border-radius: 5px;
+                    text-align: center;
+                    line-height: 35px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #333;
+                    box-shadow: 3px 3px 15px black;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+            }
+
+            .swiper-slide:hover {
+
+                &>.backplate {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                &>p {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                &>a {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            &>img {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &>.list_new {
+        width: 100%;
+
+        &>.sw-new {
+            & .swiper-slide {
+                width: 300px;
+                position: relative;
+                transition: 0.25s;
+
+                &>img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &>.backplate {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(#000, 0.3);
+                    width: 100%;
+                    height: 100%;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.28s;
+                }
+
+                &>span {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 45px;
+                    height: 45px;
+                    background-color: #FFBF00;
+                    text-align: center;
+                    font-weight: bold;
+                    line-height: 21px;
+                    z-index: 15;
+                }
+
+                &>p {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 40%;
+                    color: white;
+                    font-size: 12px;
+                    font-weight: 300;
+                    text-shadow: 3px 3px 10px black;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.3s;
+                    text-align: center;
+                }
+
+                &>a {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 50px;
+                    width: 105px;
+                    height: 35px;
+                    background-color: #FFBF00;
+                    border-radius: 5px;
+                    text-align: center;
+                    line-height: 35px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #333;
+                    box-shadow: 3px 3px 15px black;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+            }
+
+            .swiper-slide:hover {
+
+                &>.backplate {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                &>p {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                &>a {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            &>img {
+                width: 100%;
+            }
+        }
+
+    }
+
+
 }
 
 .section_lookbook {
