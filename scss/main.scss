@@ -198,17 +198,111 @@ img {
     & .list_section {
         width: 100%;
         height: 275px;
-        background-color: yellow;
+        // background-color: yellow;
     }
 
     & .list_md {
         height: 400px;
+        display: flex;
+        flex-wrap: wrap;
 
+        &>.md_item {
+            width: 195px;
+            height: 400px;
+            margin-right: 15px;
+            transition: 0.3s;
+            position: relative;
+            cursor: pointer;
+
+            &>img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &>.md_desc {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 282px;
+                height: 400px;
+                background-color: rgba(0, 0, 0, 0.3);
+                box-sizing: border-box;
+                padding-top: 90px;
+                padding-left: 15px;
+                font-weight: normal;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.35s;
+
+                &>p {
+                    text-shadow: 3px 3px 10px black;
+                    color: white;
+                }
+
+                &>a {
+                    position: absolute;
+                    display: block;
+                    width: 105px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 35px;
+                    background-color: #FFBF00;
+                    border-radius: 5px;
+                    color: black;
+                    left: 80px;
+                    bottom: 58px;
+                    // margin-top: 90px;
+                    // margin-left: 80px;
+                    box-shadow: 0px 4px 6px black;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &>#md_on {
+            width: 615px;
+            height: 400px;
+
+            &>.md_desc {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &>.md_item:last-child {
+            margin-right: 0;
+        }
     }
 
     & .list_insta {
         height: 300px;
+        overflow: hidden;
+        position: relative;
 
+        &>.list_insta_in {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3735px;
+            display: flex;
+            justify-content: space-between;
+            transform: translate3d(0, 0, 0);
+            animation: moveSlideshow 20s linear infinite;
+
+            &>a {
+                display: flex;
+                width: 300px;
+                height: 300px;
+                align-items: center;
+                justify-content: center;
+
+                &>img {
+                    width: 100%;
+                    height: 100%;
+                    transition: 0.8s;
+                }
+            }
+        }
     }
 
     &>.list_best {
@@ -438,7 +532,6 @@ img {
         &>div {
             width: 615px;
             height: 615px;
-            background-color: yellowgreen;
         }
 
         &>.lb_t_r {
@@ -473,5 +566,45 @@ img {
         margin: 0 auto;
         background-color: cornflowerblue;
         margin-bottom: 15px;
+        position: relative;
+
+        &>.lookbook_stand {
+            position: absolute;
+            left: 50%;
+            top: 2%;
+            transform: translateX(-50%);
+            width: 178px;
+            height: 625px;
+        }
+        &>.lookbook_item1{
+            position: absolute;
+            left: 616px;
+            top: 13px;
+            transform: translateX(-50%);
+            width: 102px;
+            height: 80px;          
+        }
+        &>.lookbook_item2{
+            position: absolute;
+            left: 629px;
+            top: 99px;
+            transform: translateX(-50%);
+            width: 164px;
+            height: 270px;          
+        }
+        &>.lookbook_item3{
+            position: absolute;
+            left: 605px;
+            top: 242px;
+            transform: translateX(-50%);
+            width: 143px;
+            height: 207px;          
+        }
+    }
+}
+
+@keyframes moveSlideshow {
+    100% {
+        transform: translateX(-66.6666%);
     }
 }

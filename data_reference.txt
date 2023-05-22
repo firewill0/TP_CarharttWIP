@@ -1,0 +1,69 @@
+Item 1
+       .lookbook_stand
+            width: 237px;
+            height: 638px;
+
+        .lookbook_item1
+            left: 658px;
+            top: 15px;
+            width: 96px;
+            height: 71px;          
+
+        .lookbook_item2
+            left: 647px;
+            top: 88px;
+            width: 197px;
+            height: 264px;   
+
+        .lookbook_item3
+            left: 633px;
+            top: 335px;
+            width: 152px;
+            height: 151px;          
+
+Item 2
+       .lookbook_stand
+            width: 178px;
+            height: 625px;
+
+        .lookbook_item1
+            left: 616px;
+            top: 13px;
+            width: 102px;
+            height: 80px;         
+
+        .lookbook_item2
+            left: 629px;
+            top: 99px;
+            width: 197px;
+            height: 264px;   
+
+        .lookbook_item3
+            left: 605px;
+            top: 242px;
+            width: 152px;
+            height: 151px;         
+
+Item 3
+       .lookbook_stand
+            width: 237px;
+            height: 638px;
+
+        .lookbook_item1
+            left: 658px;
+            top: 15px;
+            width: 96px;
+            height: 71px;          
+
+        .lookbook_item2
+            left: 647px;
+            top: 88px;
+            width: 197px;
+            height: 264px;   
+
+        .lookbook_item3
+            left: 633px;
+            top: 335px;
+            width: 152px;
+            height: 151px;          
+ 
