@@ -19,9 +19,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <script src="./js/data.js" type="module"></script>
     <script src="./js/lnb_img.js" type="module"></script>
     <script src="./js/insta_anim_ctrl.js" type="module"></script>
     <script src="./js/md_anim_ctrl.js" type="module"></script>
+    <script src="./js/lookbook_anim_ctrl.js" type="module"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
 
@@ -279,25 +281,30 @@
         <div class="title_section">LOOK BOOK - S/S 2023
         </div>
         <div class="lookbook_top">
-            <div class="lb_t_l">
+            <div class="lb_t_l lb" id="lookbook_1">
                 <img src="./img/lookbook/lookbook_1_thumb.jpg" alt="lb_thumb_1">
             </div>
             <div class="lb_t_r">
                 <div class="lb_t_r_t"><iframe width="615" height="300"
-                        src="https://www.youtube.com/embed/eE5SJTZ4XtU?controls=0" title="YouTube video player"
-                        frameborder="0"
+                        src="https://www.youtube.com/embed/eE5SJTZ4XtU?controls=1&autoplay=1&mute=1"
+                        title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe></div>
-                <div class="lb_t_r_l"> <img src="./img/lookbook/lookbook_2_thumb.jpg" alt="lb_thumb_2"></div>
-                <div class="lb_t_r_r"> <img src="./img/lookbook/lookbook_3_thumb.jpg" alt="lb_thumb_3"></div>
+                <div class="lb_t_r_l lb" id="lookbook_2"> <img src="./img/lookbook/lookbook_2_thumb.jpg" alt="lb_thumb_2">
+                </div>
+                <div class="lb_t_r_r lb" id="lookbook_3"> <img src="./img/lookbook/lookbook_3_thumb.jpg" alt="lb_thumb_3">
+                </div>
             </div>
         </div>
         <div class="lookbook_display">
-            <img src="./img/lookbook/lookbook_2_background.jpg" alt="background_img">
-            <img class="lookbook_stand" src="./img/lookbook/lookbook_2_stand_off.png" alt="lookbook_stand_img">
-            <img class="lookbook_item1" src="./img/lookbook/lookbook_2_item_1.png" alt="lookbook_item1">
-            <img class="lookbook_item2" src="./img/lookbook/lookbook_2_item_2.png" alt="lookbook_item2">
-            <img class="lookbook_item3" src="./img/lookbook/lookbook_2_item_3.png" alt="lookbook_item3">
+            <img class="lookbook_background" src="./img/lookbook/lookbook_1_background.jpg" alt="background_img">
+            <img class="lookbook_stand" src="./img/lookbook/lookbook_1_stand_off.png" alt="lookbook_stand_img">
+            <img class="lookbook_item lookbook_item1" src="./img/lookbook/lookbook_1_item_1.png" alt="lookbook_item1">
+            <img class="lookbook_item lookbook_item2" src="./img/lookbook/lookbook_1_item_2.png" alt="lookbook_item2">
+            <img class="lookbook_item lookbook_item3" src="./img/lookbook/lookbook_1_item_3.png" alt="lookbook_item3">
+            <p class="lookbook_item_desc lookbook_item1_desc"></p>
+            <p class="lookbook_item_desc lookbook_item2_desc"></p>
+            <p class="lookbook_item_desc lookbook_item3_desc"></p>
         </div>
     </section>
 

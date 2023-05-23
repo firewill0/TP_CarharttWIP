@@ -33,37 +33,37 @@ Item 2
             height: 80px;         
 
         .lookbook_item2
-            left: 629px;
+            left: 628px;
             top: 99px;
-            width: 197px;
-            height: 264px;   
+            width: 166px;
+            height: 269px;
 
         .lookbook_item3
             left: 605px;
             top: 242px;
             width: 152px;
-            height: 151px;         
+            height: 209px;    
 
-Item 3
+        Item 3
        .lookbook_stand
-            width: 237px;
-            height: 638px;
+            width: 176px;
+            height: 636px;
 
         .lookbook_item1
-            left: 658px;
-            top: 15px;
-            width: 96px;
-            height: 71px;          
+            left: 621px;
+            top: 13px;
+            width: 63px;
+            height: 36px;           
 
         .lookbook_item2
-            left: 647px;
-            top: 88px;
-            width: 197px;
-            height: 264px;   
+            left: 622px;
+            top: 106px;
+            width: 178px;
+            height: 241px;    
 
         .lookbook_item3
-            left: 633px;
-            top: 335px;
-            width: 152px;
-            height: 151px;          
+            left: 620px;
+            top: 317px;
+            width: 139px;
+            height: 301px;           
  
