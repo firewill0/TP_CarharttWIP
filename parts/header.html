@@ -21,7 +21,25 @@
         <div class="lnb_hover"><a href="#">PROMOTION</a></div>
         <div class="lnb_hover"><a href="#">SALE</a></div>
         <div class="lnb_hover"><a href="#">BRAND</a></div>
-        <div><a href="#">인기검색어</a></div>
+        <div class="swiper popularBox">
+            <div class="swiper-wrapper sw-pop">
+                <a class="swiper-slide" href="#"><span>1</span>
+                    <p>23 S/S GOODS</p>
+                </a>
+                <a class="swiper-slide" href="#"><span>2</span>
+                    <p>Summer Item</p>
+                </a>
+                <a class="swiper-slide" href="#"><span>3</span>
+                    <p>Label Feature: Sneaker Social Club</p>
+                </a>
+                <a class="swiper-slide" href="#"><span>4</span>
+                    <p>SS23 STYLE GUIDE</p>
+                </a>
+                <a class="swiper-slide" href="#"><span>5</span>
+                    <p>바지</p>
+                </a>
+            </div>
+        </div>
     </nav>
     <div class="lnb_menu">
         <div class="lnb_menu_in">
@@ -64,3 +82,17 @@
         </div>
     </div>
 </div>
+
+<script>
+    // popularBox
+    const swiper_pop = new Swiper('.popularBox', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
+
+        autoplay: {
+            delay: 2000,
+            pauseOnMouseEnter: true,
+        },
+    });
+</script>

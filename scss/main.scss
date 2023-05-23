@@ -529,6 +529,18 @@ img {
         justify-content: space-between;
         margin-bottom: 15px;
 
+        & .lb {
+            overflow: hidden;
+            & img {
+                transition: 0.3s;
+            }
+        }
+
+        & .lb:hover img {
+            scale: 1.2;
+            transform-origin: center center;
+        }
+
         &>div {
             width: 615px;
             height: 615px;
