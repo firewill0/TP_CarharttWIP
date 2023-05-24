@@ -2,70 +2,174 @@ const Lookbook_Data = [{
     id: "lookbook_1",
     background_src: "./img/lookbook/lookbook_1_background.jpg",
     stand_src: "./img/lookbook/lookbook_1_stand_off.png",
-    stand_data:["237px","638px"],
+    stand_data: ["237px", "638px"],
     item1_src: "./img/lookbook/lookbook_1_item_1.png",
     item2_src: "./img/lookbook/lookbook_1_item_2.png",
     item3_src: "./img/lookbook/lookbook_1_item_3.png",
-    item1_data:["96px","71px","658px","15px"],
-    item2_data:["197px","264px","647px","88px"],
-    item3_data:["152px","151px","633px","335px"],
+    item1_data: ["96px", "71px", "658px", "15px"],
+    item2_data: ["197px", "264px", "647px", "88px"],
+    item3_data: ["152px", "151px", "633px", "335px"],
     item1_desc: ["TYLER BUCKET HAT", "YUCCA", "₩ 103,000"],
     item2_desc: ["S/S MASTER SHIRT", "TEIDE", "₩ 113,000"],
     item3_desc: ["REGULAR CARGO SHORT COLUMBIA", "BUFFALO RINSED", "₩ 138,000"],
-    item1_url:"https://carhartt-wip.co.kr/product/142863",
-    item2_url:"https://carhartt-wip.co.kr/product/142987",
-    item3_url:"https://carhartt-wip.co.kr/product/143141"
+    item1_url: "https://carhartt-wip.co.kr/product/142863",
+    item2_url: "https://carhartt-wip.co.kr/product/142987",
+    item3_url: "https://carhartt-wip.co.kr/product/143141"
   },
   {
     id: "lookbook_2",
     background_src: "./img/lookbook/lookbook_2_background.jpg",
     stand_src: "./img/lookbook/lookbook_2_stand_off.png",
-    stand_data:["178px","625px"],
+    stand_data: ["178px", "625px"],
     item1_src: "./img/lookbook/lookbook_2_item_1.png",
     item2_src: "./img/lookbook/lookbook_2_item_2.png",
     item3_src: "./img/lookbook/lookbook_2_item_3.png",
-    item1_data:["102px","80px","616px","13px"],
-    item2_data:["166px","269px","628px","99px"],
-    item3_data:["152px","209px","605px","242px"],
+    item1_data: ["102px", "80px", "616px", "13px"],
+    item2_data: ["166px", "269px", "628px", "99px"],
+    item3_data: ["152px", "209px", "605px", "242px"],
     item1_desc: ["ELWAY BUCKET HAT", "DOLLAR GREEN", "₩ 103,000"],
     item2_desc: ["W S/S COBA SHIRT", "WHITE", "₩ 208,000"],
     item3_desc: ["W TRISTIN SHORT", "BLACK RINSED", "₩ 138,000"],
-    item1_url:"https://carhartt-wip.co.kr/product/142799",
-    item2_url:"https://carhartt-wip.co.kr/product/143447",
-    item3_url:"https://carhartt-wip.co.kr/product/139695"
+    item1_url: "https://carhartt-wip.co.kr/product/142799",
+    item2_url: "https://carhartt-wip.co.kr/product/143447",
+    item3_url: "https://carhartt-wip.co.kr/product/139695"
   },
   {
     id: "lookbook_3",
     background_src: "./img/lookbook/lookbook_3_background.jpg",
     stand_src: "./img/lookbook/lookbook_3_stand_off.png",
-    stand_data:["176px","636px"],
+    stand_data: ["176px", "636px"],
     item1_src: "./img/lookbook/lookbook_3_item_1.png",
     item2_src: "./img/lookbook/lookbook_3_item_2.png",
     item3_src: "./img/lookbook/lookbook_3_item_3.png",
-    item1_data:["63px","36px","621px","13px"],
-    item2_data:["178px","241px","622px","106px"],
-    item3_data:["139px","301px","620px","317px"],
+    item1_data: ["63px", "36px", "621px", "13px"],
+    item2_data: ["178px", "241px", "622px", "106px"],
+    item3_data: ["139px", "301px", "620px", "317px"],
     item1_desc: ["MADISON LOGO CAP", "BLACK", "₩ 68,000"],
     item2_desc: ["S/S COIN T-SHIRT", "ARCADE/SUNRISE", "₩ 83,000"],
     item3_desc: ["BRANDON PANT SMITH", "BLUE STONE BLEACHED", "₩ 165,000"],
-    item1_url:"https://carhartt-wip.co.kr/product/142710",
-    item2_url:"https://carhartt-wip.co.kr/product/143011",
-    item3_url:"https://carhartt-wip.co.kr/product/143173"
+    item1_url: "https://carhartt-wip.co.kr/product/142710",
+    item2_url: "https://carhartt-wip.co.kr/product/143011",
+    item3_url: "https://carhartt-wip.co.kr/product/143173"
   }
 ];
 
-const shoppingList_Top = [
-  {
+const shoppingList_Top = [{
     id: "top_ts_m_01",
     name: "반팔 라이프가즈 티셔츠",
-    subname:"S/S LIFEGUARDS T-SHIRT",
+    subname: "S/S LIFEGUARDS T-SHIRT",
+    category: ["top", "tshirt"],
+    gender: "male",
     price: 75000,
-    src: ["./img/best_04.png"],
-    color:["black","white","yellow"],
+    src: ["./img/top/top_ts_m_01/front_black.jpg", "./img/top/top_ts_m_01/back_black.jpg"],
+    color: ["black", "white", "yellow"],
     isOut: false,
-    discountRate : 0
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_ts_m_02",
+    name: "반팔 이노베이션 포켓 티셔츠",
+    subname: "S/S INNOVATION POCKET T-SHIRT",
+    category: ["top", "tshirt"],
+    gender: "male",
+    price: 85000,
+    src: ["./img/top/top_ts_m_02/front_white.jpg", "./img/top/top_ts_m_02/back_white.jpg"],
+    color: ["white", "black", "grey"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_ts_m_03",
+    name: "반팔 버커루 티셔츠",
+    subname: "S/S BUCKAROO T-SHIRT",
+    category: ["top", "tshirt"],
+    gender: "male",
+    price: 78000,
+    src: ["./img/top/top_ts_m_03/front_brown.jpg", "./img/top/top_ts_m_03/back_brown.jpg"],
+    color: ["brown", "white", "green"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_ts_m_04",
+    name: "반팔 부기 티셔츠",
+    subname: "S/S BOOGIE T-SHIRT",
+    category: ["top", "tshirt"],
+    gender: "male",
+    price: 78000,
+    src: ["./img/top/top_ts_m_04/front_yellow.jpg", "./img/top/top_ts_m_04/back_yellow.jpg"],
+    color: ["yellow", "white", "grey"],
+    isOut: false,
+    isBest: true,
+    isNew: false,
+    discountRate: 0
+  },
+  {
+    id: "top_jacket_m_01",
+    name: "코스탈 자켓",
+    subname: "COASTAL JACKET",
+    category: ["top", "jacket"],
+    gender: "male",
+    price: 248000,
+    src: ["./img/top/top_jacket_m_01/front_black.jpg", "./img/top/top_jacket_m_01/back_black.jpg"],
+    color: ["black", "white"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_jacket_m_02",
+    name: "살레도 자켓",
+    subname: "SALEDO JACKET",
+    category: ["top", "jacket"],
+    gender: "male",
+    price: 208000,
+    src: ["./img/top/top_jacket_m_02/front_blue.jpg", "./img/top/top_jacket_m_02/back_blue.jpg"],
+    color: ["blue", "black"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_jacket_m_03",
+    name: "알링 자켓",
+    subname: "ARLING JACKET",
+    category: ["top", "jacket"],
+    gender: "male",
+    price: 368000,
+    src: ["./img/top/top_jacket_m_03/front_black.jpg", "./img/top/top_jacket_m_03/back_black.jpg"],
+    color: ["black", "blue"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
   }
-
+  ,
+  {
+    id: "top_jacket_m_04",
+    name: "알마 자켓",
+    subname: "ALMA JACKET",
+    category: ["top", "jacket"],
+    gender: "male",
+    price: 298000,
+    src: ["./img/top/top_jacket_m_04/front_black.jpg", "./img/top/top_jacket_m_04/back_black.jpg"],
+    color: ["black"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  }
 ]
 
-export {Lookbook_Data,shoppingList_Top} 
+export {
+  Lookbook_Data,
+  shoppingList_Top
+}

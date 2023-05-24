@@ -19,6 +19,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <script src="./js/lnb_img.js" type="module"></script>
+    <script src="./js/ctrl_subpage_list.js" type="module"></script>
 </head>
 
 <body>
@@ -162,9 +163,11 @@
                 </div>
             </div>
             <div class="items_list">
-                <a href="./item_detail.html" class="item">
+                <!-- <div class="item">
                     <div class="item_img">
-                        <img src="./img/top/m_jacket_1_0.jpg" alt="item">
+                        <a href="./item_detail.html" class="item_url"></a>
+                        <img src="./img/top/top_ts_m_01/front_black.jpg" alt="item">
+                        <img class="img_hover" src="./img/top/top_ts_m_01/back_black.JPG" alt="img_hover">
                         <div class="cart">
                         </div>
                     </div>
@@ -182,17 +185,17 @@
                         </p>
                         <p class="desc_price">₩ 148,000</p>
                     </div>
-                </a>
+                </div> -->
             </div>
             <div class="box_page">
-                <button type="button">
-                    <<</button> <button type="button">
-                        <</button> <div class="pagination">
-                            <div class="page_btn">1</div>
+                <button type="button">처음</button>
+                <button type="button">이전</button>
+                <div class="pagination">
+                    <!-- <div class="page_btn">1</div> -->
+                </div>
+                <button type="button">다음</button>
+                <button type="button">마지막</button>
             </div>
-            <button type="button">></button>
-            <button type="button">>></button>
-        </div>
         </div>
     </section>
     <include src="./parts/footer.html"></include>

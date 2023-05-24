@@ -1,7 +1,9 @@
-import shoppingList from "./data.js";
+import {
+    shoppingList_Top
+} from "./data.js";
 
-const bestproduct = document.querySelector('.best_product');
-const pagenation = document.querySelector('.pagenation');
+const items_list = document.querySelector('.items_list');
+const pagenation = document.querySelector('.pagination');
 let page = 1;
 let c = 1;
 let check = 12;
@@ -9,79 +11,178 @@ let cut = 0;
 let tempNum = 0;
 let pageAry = [];
 
-const pageBtn = document.createElement('button');
-pageBtn.setAttribute('class', 'pageBtn');
-pageBtn.setAttribute('type', 'module');
+const pageBtn = document.createElement('div');
+pageBtn.setAttribute('class', 'page_btn');
+// pageBtn.setAttribute('type', 'module');
 pageBtn.innerText = page;
 pagenation.appendChild(pageBtn);
 
-let shoppingListCount = shoppingList.length;
+let shoppingList_TopCount = shoppingList_Top.length;
 
-console.log(shoppingListCount);
+let KrWon = new Intl.NumberFormat('ko-KR', {
+    style: 'currency',
+    currency: 'KRW',
+});
 
-if (shoppingListCount < 12) {
-    for (let i = 0; i < shoppingListCount; i++) {
-        const bestDiv = document.createElement('div');
-        bestDiv.setAttribute('class', 'best_box');
+console.log(shoppingList_TopCount);
 
-        const bestImg = document.createElement('img');
-        bestImg.setAttribute('src', shoppingList[i].src);
-        bestDiv.appendChild(bestImg);
+if (shoppingList_TopCount < 12) {
+    for (let i = 0; i < shoppingList_TopCount; i++) {
 
-        const bestName = document.createElement('p');
-        const bestNameText = document.createTextNode(shoppingList[i].name);
-        bestName.appendChild(bestNameText);
+        const Item = document.createElement('div');
+        Item.setAttribute('class', 'item');
 
-        const bestPrice = document.createElement('p');
-        let price = shoppingList[i].price;
-        price = price - (price * 0.3);
-        const bestPriceText = document.createTextNode(price);
-        bestPrice.appendChild(bestPriceText);
+        const item_img = document.createElement('div');
+        item_img.setAttribute('class', 'item_img');
 
-        bestDiv.appendChild(bestName);
-        bestDiv.appendChild(bestPrice);
+        const item_url = document.createElement('a');
+        item_url.setAttribute('class','item_url');
+        item_url.setAttribute('href',"./item_detail.html" );
+        item_img.appendChild(item_url);
 
-        bestproduct.appendChild(bestDiv);
+        const itemImg = document.createElement('img');
+        itemImg.setAttribute('src', shoppingList_Top[i].src[0]);
+        item_img.appendChild(itemImg);
+
+        const img_hover = document.createElement('img');
+        img_hover.setAttribute('class', 'img_hover');
+        img_hover.setAttribute('src', shoppingList_Top[i].src[1]);
+        item_img.appendChild(img_hover);
+
+        const cart = document.createElement('div');
+        cart.setAttribute('class', 'cart');
+        item_img.appendChild(cart);
+
+        const desc_top = document.createElement('p');
+        desc_top.setAttribute('class', 'desc_top');
+
+        if (shoppingList_Top[i].isBest) {
+            const best = document.createElement('span');
+            const bestTxt = document.createTextNode("BEST");
+            best.setAttribute('class','best');
+            best.appendChild(bestTxt);
+            desc_top.appendChild(best);
+        }
+        if (shoppingList_Top[i].isNew) {
+            const newtag = document.createElement('span');
+            const newtxt = document.createTextNode("NEW");
+            newtag.setAttribute('class','new');
+            newtag.appendChild(newtxt);
+            desc_top.appendChild(newtag);
+        }
+
+        const desc = document.createElement('div');
+        desc.setAttribute('class', 'desc');
+
+        const itemName = document.createElement('p');
+        itemName.setAttribute('class', 'desc_main');
+        const itemNameText = document.createTextNode(shoppingList_Top[i].name);
+        itemName.appendChild(itemNameText);
+
+        const itemSubName = document.createElement('p');
+        itemSubName.setAttribute('class', 'desc_sub');
+        const itemSubNameText = document.createTextNode(shoppingList_Top[i].subname);
+        itemSubName.appendChild(itemSubNameText);
+
+        const itemPrice = document.createElement('p');
+        let price = shoppingList_Top[i].price;
+        // const itemPriceText = document.createTextNode(price);
+        const itemPriceText = document.createTextNode(KrWon.format(price));
+        itemPrice.setAttribute('class','desc_price');
+
+        itemPrice.appendChild(itemPriceText);
+
+        desc.appendChild(itemName);
+        desc.appendChild(itemSubName);
+        desc.appendChild(itemPrice);
+
+        Item.appendChild(item_img);
+        Item.appendChild(desc_top);
+        Item.appendChild(desc);
+
+        items_list.appendChild(Item);
     }
 } else {
     for (let i = 0; i < 12; i++) {
-        const bestDiv = document.createElement('div');
-        bestDiv.setAttribute('class', 'best_box');
+        const Item = document.createElement('div');
+        Item.setAttribute('class', 'item');
 
-        const bestImg = document.createElement('img');
-        bestImg.setAttribute('src', shoppingList[i].src);
-        bestDiv.appendChild(bestImg);
+        const item_img = document.createElement('div');
+        item_img.setAttribute('class', 'item_img');
 
-        const bestName = document.createElement('p');
-        const bestNameText = document.createTextNode(shoppingList[i].name);
-        bestName.appendChild(bestNameText);
+        const itemImg = document.createElement('img');
+        itemImg.setAttribute('src', shoppingList_Top[i].src[0]);
+        item_img.appendChild(itemImg);
 
-        const bestPrice = document.createElement('p');
-        let price = shoppingList[i].price;
-        price = price - (price * 0.3);
-        const bestPriceText = document.createTextNode(price);
-        bestPrice.appendChild(bestPriceText);
+        const img_hover = document.createElement('img');
+        img_hover.setAttribute('class', 'img_hover');
+        img_hover.setAttribute('src', shoppingList_Top[i].src[1]);
+        item_img.appendChild(img_hover);
 
-        bestDiv.appendChild(bestName);
-        bestDiv.appendChild(bestPrice);
+        const cart = document.createElement('div');
+        cart.setAttribute('class', 'cart');
+        item_img.appendChild(cart);
 
-        bestproduct.appendChild(bestDiv);
+        const desc_top = document.createElement('div');
+        desc_top.setAttribute('class', 'desc_top');
+
+        if (shoppingList_Top[i].isBest) {
+            const best = document.createElement('span');
+            const bestTxt = document.createTextNode("BEST");
+            best.appendChild(bestTxt);
+            desc_top.appendChild(best);
+        }
+        if (shoppingList_Top[i].isNew) {
+            const newtag = document.createElement('span');
+            const newtxt = document.createTextNode("NEW");
+            newtag.appendChild(newtxt);
+            desc_top.appendChild(newtag);
+        }
+
+        const desc = document.createElement('div');
+        desc.setAttribute('class', 'desc');
+
+        const itemName = document.createElement('p');
+        itemName.setAttribute('class', 'desc_main');
+        const itemNameText = document.createTextNode(shoppingList_Top[i].name);
+        itemName.appendChild(itemNameText);
+
+        const itemSubName = document.createElement('p');
+        itemSubName.setAttribute('class', 'desc_sub');
+        const itemSubNameText = document.createTextNode(shoppingList_Top[i].subname);
+        itemSubName.appendChild(itemSubNameText);
+
+        const itemPrice = document.createElement('p');
+        let price = shoppingList_Top[i].price;
+        // const itemPriceText = document.createTextNode(price);
+        const itemPriceText = document.createTextNode(KrWon.format(price));
+
+        itemPrice.appendChild(itemPriceText);
+
+        desc.appendChild(itemName);
+        desc.appendChild(itemSubName);
+        desc.appendChild(itemPrice);
+
+        Item.appendChild(item_img);
+        Item.appendChild(desc_top);
+        Item.appendChild(desc);
+
+        items_list.appendChild(Item);
     }
 }
 
-for (let i = 0; i < shoppingListCount; i++) {
+for (let i = 0; i < shoppingList_TopCount; i++) {
     pageAry[page - 1] = c;
     if (c > 11) {
         cut++;
         check = check * cut;
 
-        if ((shoppingListCount - check) > 0) {
+        if ((shoppingList_TopCount - check) > 0) {
             page = page + 1;
             c = 1;
             console.log(page, c);
-            const pageBtn = document.createElement('button');
-            pageBtn.setAttribute('class', 'pageBtn');
-            pageBtn.setAttribute('type', 'module');
+            const pageBtn = document.createElement('div');
+            pageBtn.setAttribute('class', 'page_btn');
             pageBtn.innerText = page;
             pagenation.appendChild(pageBtn);
         }
@@ -103,13 +204,13 @@ for (let i = 0; i < pageBtns.length; i++) {
 
         num = num * i;
 
-        tempNum = shoppingListCount;
+        tempNum = shoppingList_TopCount;
         tempNum = tempNum - num;
 
         console.log("num:  " + num + "tempnum:  " + tempNum);
 
-        while (bestproduct.hasChildNodes()) {
-            bestproduct.removeChild(bestproduct.firstChild);
+        while (items_list.hasChildNodes()) {
+            items_list.removeChild(items_list.firstChild);
         }
 
         let Loopcount = pageAry[i];
@@ -118,28 +219,70 @@ for (let i = 0; i < pageBtns.length; i++) {
             let count = num + i;
             console.log("count is  ", count);
 
-            const bestDiv = document.createElement('div');
-            bestDiv.setAttribute('class', 'best_box');
-
-            const bestImg = document.createElement('img');
-            bestImg.setAttribute('src', shoppingList[count].src);
-            bestDiv.appendChild(bestImg);
-
-            const bestName = document.createElement('p');
-            const bestNameText = document.createTextNode(shoppingList[count].name);
-            bestName.appendChild(bestNameText);
-
-            const bestPrice = document.createElement('p');
-            let price = shoppingList[count].price;
-            price = price - (price * 0.3);
-            const bestPriceText = document.createTextNode(price);
-            bestPrice.appendChild(bestPriceText);
-
-            bestDiv.appendChild(bestName);
-            bestDiv.appendChild(bestPrice);
-
-            bestproduct.appendChild(bestDiv);
+            const Item = document.createElement('div');
+            Item.setAttribute('class', 'item');
+    
+            const item_img = document.createElement('div');
+            item_img.setAttribute('class', 'item_img');
+    
+            const itemImg = document.createElement('img');
+            itemImg.setAttribute('src', shoppingList_Top[count].src[0]);
+            item_img.appendChild(itemImg);
+    
+            const img_hover = document.createElement('img');
+            img_hover.setAttribute('class', 'img_hover');
+            img_hover.setAttribute('src', shoppingList_Top[count].src[1]);
+            item_img.appendChild(img_hover);
+    
+            const cart = document.createElement('div');
+            cart.setAttribute('class', 'cart');
+            item_img.appendChild(cart);
+    
+            const desc_top = document.createElement('div');
+            desc_top.setAttribute('class', 'desc_top');
+    
+            if (shoppingList_Top[count].isBest) {
+                const best = document.createElement('span');
+                const bestTxt = document.createTextNode("BEST");
+                best.appendChild(bestTxt);
+                desc_top.appendChild(best);
+            }
+            if (shoppingList_Top[count].isNew) {
+                const newtag = document.createElement('span');
+                const newtxt = document.createTextNode("NEW");
+                newtag.appendChild(newtxt);
+                desc_top.appendChild(newtag);
+            }
+    
+            const desc = document.createElement('div');
+            desc.setAttribute('class', 'desc');
+    
+            const itemName = document.createElement('p');
+            itemName.setAttribute('class', 'desc_main');
+            const itemNameText = document.createTextNode(shoppingList_Top[count].name);
+            itemName.appendChild(itemNameText);
+    
+            const itemSubName = document.createElement('p');
+            itemSubName.setAttribute('class', 'desc_sub');
+            const itemSubNameText = document.createTextNode(shoppingList_Top[count].subname);
+            itemSubName.appendChild(itemSubNameText);
+    
+            const itemPrice = document.createElement('p');
+            let price = shoppingList_Top[count].price;
+            // const itemPriceText = document.createTextNode(price);
+            const itemPriceText = document.createTextNode(KrWon.format(price));
+    
+            itemPrice.appendChild(itemPriceText);
+    
+            desc.appendChild(itemName);
+            desc.appendChild(itemSubName);
+            desc.appendChild(itemPrice);
+    
+            Item.appendChild(item_img);
+            Item.appendChild(desc_top);
+            Item.appendChild(desc);
+    
+            items_list.appendChild(Item);
         }
     });
 }
-
