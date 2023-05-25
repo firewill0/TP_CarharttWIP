@@ -36,6 +36,8 @@
                 img {
                     width: 90px;
                     height: 90px;
+                    object-fit: cover;
+                    object-position: center 10%;
                 }
             }
 
@@ -95,6 +97,7 @@
                 .item_tag_box {
                     margin-top: 15px;
                     display: flex;
+                    height: 22px;
 
                     &>div {
                         width: 41px;
@@ -261,6 +264,7 @@
                         border: 2px solid #D9D9D9;
                         cursor: pointer;
                         margin-right: 15px;
+                        object-fit: cover;
                     }
 
                     & img:last-child {
@@ -273,7 +277,6 @@
             .item_size {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
                 margin-top: 30px;
 
                 &>p {
@@ -281,13 +284,30 @@
                     margin-bottom: 14px;
                 }
 
-                &>div {
+                &>div.size {
                     width: calc((100% - 40px) / 5);
                     height: 57px;
                     text-align: center;
                     line-height: 57px;
-                    background-color: #D9D9D9;
+                    background-color: #fff6f8;
+                    border: 1px solid #ccc;
+                    box-sizing: border-box;
                     cursor: pointer;
+                    transition: 0.2s;
+                    margin-right: 10px;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+
+                    &:hover{
+                        background-color: #FFBF00;
+                    }
+
+                    &.sizechecked {
+                        background-color: #4136BF;
+                        color: white;
+                    }
                 }
             }
 
@@ -580,6 +600,7 @@
                             text-align: center;
                             width: 90px;
                         }
+
                         &>.reply_answer {
                             box-sizing: border-box;
                             padding-left: 45px;

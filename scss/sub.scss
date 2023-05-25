@@ -94,6 +94,11 @@
                     cursor: pointer;
                     user-select: none;
                     position: relative;
+                    transition: 0.1s;
+                }
+
+                & div:hover {
+                    font-weight: 400;
                 }
 
                 & div::after {
@@ -199,6 +204,8 @@
             }
 
             & .pagination {
+                display: flex;
+
                 .page_btn {
                     width: 40px;
                     height: 40px;
@@ -343,6 +350,9 @@
     }
 }
 
+.dummya {
+    display: none;
+}
 .items_list {
     display: flex;
     width: 930px;
@@ -382,6 +392,7 @@
                 left: 0;
                 top: 0;
                 z-index: 10;
+                cursor: pointer;
             }
 
             .cart {
@@ -410,42 +421,41 @@
             }
         }
 
-
-
-        p.desc_top {
-            font-weight: bold;
-
-            .best {
-                display: inline-block;
-                margin-right: 5px;
-                color: #DC5C54;
-            }
-
-            .new {
-                display: inline-block;
-                color: #545ADC;
-            }
-        }
-
-        .desc {
-            .desc_main {
-                font-weight: bold;
-            }
-
-            .desc_sub {
-                margin-bottom: 30px;
-            }
-
-            .desc_price {
-                font-weight: bold;
-                padding-left: 5px;
-                box-sizing: border-box;
-                font-size: 20px;
-            }
-        }
     }
 
     .item:nth-child(3n+3) {
         margin-right: 0;
+    }
+}
+
+.desc_top {
+    font-weight: bold;
+
+    .best {
+        display: inline-block;
+        margin-right: 5px;
+        color: #DC5C54;
+    }
+
+    .new {
+        display: inline-block;
+        color: #545ADC;
+    }
+}
+
+.desc {
+    .desc_main {
+        font-weight: bold;
+    }
+
+    .desc_sub {
+        margin-bottom: 30px;
+    }
+
+    .desc_price {
+        font-weight: bold;
+        padding-left: 5px;
+        box-sizing: border-box;
+        font-size: 20px;
     }
 }

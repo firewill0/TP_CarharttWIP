@@ -108,7 +108,7 @@ const shoppingList_Top = [{
     isOut: false,
     isBest: true,
     isNew: false,
-    discountRate: 0
+    discountRate: 0,
   },
   {
     id: "top_jacket_m_01",
@@ -151,8 +151,7 @@ const shoppingList_Top = [{
     isBest: true,
     isNew: true,
     discountRate: 0
-  }
-  ,
+  },
   {
     id: "top_jacket_m_04",
     name: "알마 자켓",
@@ -166,10 +165,125 @@ const shoppingList_Top = [{
     isBest: true,
     isNew: true,
     discountRate: 0
+  },
+  {
+    id: "top_s_m_01",
+    name: "반팔 블랙 잭 셔츠",
+    subname: "S/S BLACK JACK SHIRT",
+    category: ["top", "shirt"],
+    gender: "male",
+    price: 143000,
+    src: ["./img/top/top_s_m_01/front_white.jpg", "./img/top/top_s_m_01/back_white.jpg"],
+    color: ["black", "black"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_s_m_02",
+    name: "반팔 바유 셔츠",
+    subname: "S/S BAYOU SHIRT",
+    category: ["top", "shirt"],
+    gender: "male",
+    price: 143000,
+    src: ["./img/top/top_s_m_02/front_red.jpg", "./img/top/top_s_m_02/back_red.jpg"],
+    color: ["red", "blue"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_s_m_03",
+    name: "반팔 델레이 셔츠",
+    subname: "S/S DELRAY SHIRT",
+    category: ["top", "shirt"],
+    gender: "male",
+    price: 118000,
+    src: ["./img/top/top_s_m_03/front_blue.jpg", "./img/top/top_s_m_03/back_blue.jpg"],
+    color: ["blue", "grey", "red", "black"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_s_m_04",
+    name: "반팔 마리나 셔츠",
+    subname: "S/S MARINA SHIRT",
+    category: ["top", "shirt"],
+    gender: "male",
+    price: 145000,
+    src: ["./img/top/top_s_m_04/front_blue.jpg", "./img/top/top_s_m_04/back_blue.jpg"],
+    color: ["blue", "black"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_s_m_04",
+    name: "여성 반팔 로빌리아 셔츠",
+    subname: "W S/S LOVILIA SHIRT",
+    category: ["top", "shirt"],
+    gender: "female",
+    price: 138000,
+    src: ["./img/top/top_s_w_01/front.jpg", "./img/top/top_s_w_01/back.jpg"],
+    color: ["blue"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  }
+]
+
+const itemList = [{
+    id: "top_ts_m_01",
+    name: "반팔 라이프가즈 티셔츠",
+    subname: "S/S LIFEGUARDS T-SHIRT",
+    stylecode: "CA23SSTSSS00002017",
+    price: 75000,
+    rating: 5,
+    color: ["black", "white", "yellow"],
+    colorSrc: [
+      ["./img/top/top_ts_m_01/front_black.jpg", "./img/top/top_ts_m_01/back_black.jpg", "./img/top/top_ts_m_01/1_black.jpg", "./img/top/top_ts_m_01/2_black.jpg", "./img/top/top_ts_m_01/3_black.jpg", "./img/top/top_ts_m_01/4_black.jpg"],
+      ["./img/top/top_ts_m_01/front_white.jpg", "./img/top/top_ts_m_01/back_white.jpg", "./img/top/top_ts_m_01/1_white.jpg", "./img/top/top_ts_m_01/2_white.jpg", "./img/top/top_ts_m_01/3_white.jpg", "./img/top/top_ts_m_01/4_white.jpg"],
+      ["./img/top/top_ts_m_01/front_yellow.jpg", "./img/top/top_ts_m_01/back_yellow.jpg", "./img/top/top_ts_m_01/1_yellow.jpg", "./img/top/top_ts_m_01/2_yellow.jpg", "./img/top/top_ts_m_01/3_yellow.jpg", "./img/top/top_ts_m_01/4_yellow.jpg"]
+    ],
+    desc: ["S/S LIFEGUARDS T-SHIRT는 오가닉 코튼100% 싱글 저지 소재의 반팔 티셔츠입니다. 레귤러 핏이며, 정면에 그래픽 프린트가 있습니다.", "", "- 세탁 및 다림 시 그래픽의 손상 및 변형이 생길 수 있으므로, 뒤집어 세탁 및 다림을 권장합니다."],
+    size: ["S", "M", "L", "XL", "XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: true,
+    withItemID: ["bottom_short_m_01"],
+    discountRate: 0
+  },
+  {
+    id: "bottom_short_m_01",
+    name: "로튼 쇼츠 베스탈",
+    subname: "LAWTON SHORT VESTAL",
+    stylecode: "CA23SSSTOT11185001",
+    price: 148000,
+    rating: 5,
+    color: ["brown"],
+    colorSrc: [
+      ["./img/bottom/bottom_short_m_01/front_brown.jpg", "./img/bottom/bottom_short_m_01/1_brown.jpg", "./img/bottom/bottom_short_m_01/2_brown.jpg", "./img/bottom/bottom_short_m_01/3_brown.jpg", "./img/bottom/bottom_short_m_01/4_brown.jpg"]
+    ],
+    desc: ["LAWTON SHORT는 면98%, 라이크라® 2%  VESTAL 스트레치 트윌 소재의 반바지입니다. 릴렉스드 핏에 밑위는 로우 크로치입니다.", "허리 밴드는 신축성이 있으며 드로우 코드로 둘레 조절이 가능합니다. 후면 포켓에 스퀘어 라벨이 부착되어 있습니다."],
+    size: ["S", "M", "L", "XL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: true,
+    withItemID: ["top_ts_m_01"],
+    discountRate: 0
   }
 ]
 
 export {
   Lookbook_Data,
-  shoppingList_Top
+  shoppingList_Top,
+  itemList
 }
