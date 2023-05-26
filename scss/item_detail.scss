@@ -57,10 +57,13 @@
 
                     .item {
                         margin-right: 15px;
+                        cursor: pointer;
 
                         img {
                             width: 195px;
                             height: 195px;
+                            object-fit: cover;
+                            object-position: center center;
                         }
 
                         .item_name {
@@ -296,11 +299,11 @@
                     transition: 0.2s;
                     margin-right: 10px;
 
-                    &:last-child{
+                    &:last-child {
                         margin-right: 0;
                     }
 
-                    &:hover{
+                    &:hover {
                         background-color: #FFBF00;
                     }
 
@@ -498,6 +501,51 @@
                 color: white;
                 text-align: center;
                 line-height: 45px;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .review_write_box {
+                display: none;
+                .review_box {
+                    display: flex;
+
+                    .review_section {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        margin-right: 15px;
+
+                        p {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .review_text {
+
+                    width: calc(1245px - 15px);
+                    height: 150px;
+                    margin: 0 auto;
+                    margin-top: 15px;
+                }
+
+                .btns_area {
+                    display: flex;
+                    justify-content: flex-end;
+                    .review_btns {
+                        margin-top: 15px;
+                        display: block;
+                        width: 90px;
+                        height: 45px;
+                        background-color: #4136BF;
+                        color: white;
+                        text-align: center;
+                        line-height: 45px;
+                        cursor: pointer;
+                        user-select: none;
+                        margin-right: 15px;
+                    }
+                }
             }
         }
 

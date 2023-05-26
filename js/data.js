@@ -111,6 +111,62 @@ const shoppingList_Top = [{
     discountRate: 0,
   },
   {
+    id: "top_s_w_01",
+    name: "여성 반팔 로빌리아 셔츠",
+    subname: "W S/S LOVILIA SHIRT",
+    category: ["top", "shirt"],
+    gender: "female",
+    price: 138000,
+    src: ["./img/top/top_s_w_01/front.jpg", "./img/top/top_s_w_01/back.jpg"],
+    color: ["blue"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_s_w_02",
+    name: "여성 반팔 델레이 셔츠",
+    subname: "W S/S DELRAY SHIRT",
+    category: ["top", "shirt"],
+    gender: "female",
+    price: 115000,
+    src: ["./img/top/top_s_w_02/front.jpg", "./img/top/top_s_w_02/back.jpg"],
+    color: ["grey"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_jacket_w_01",
+    name: "여성 살레도 자켓",
+    subname: "W SALEDO JACKET",
+    category: ["top", "jacket"],
+    gender: "female",
+    price: 218000,
+    src: ["./img/top/top_jacket_w_01/front_blue.jpg", "./img/top/top_jacket_w_01/back_blue.jpg"],
+    color: ["blue", "white"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
+    id: "top_ts_w_01",
+    name: "여성 반팔 블러쉬 티셔츠",
+    subname: "W S/S BLUSH T-SHIRT",
+    category: ["top", "tshirt"],
+    gender: "female",
+    price: 78000,
+    src: ["./img/top/top_ts_w_01/front_blue.jpg", "./img/top/top_ts_w_01/back_blue.jpg"],
+    color: ["blue", "black", "white"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    discountRate: 0
+  },
+  {
     id: "top_jacket_m_01",
     name: "코스탈 자켓",
     subname: "COASTAL JACKET",
@@ -221,20 +277,6 @@ const shoppingList_Top = [{
     isBest: true,
     isNew: true,
     discountRate: 0
-  },
-  {
-    id: "top_s_m_04",
-    name: "여성 반팔 로빌리아 셔츠",
-    subname: "W S/S LOVILIA SHIRT",
-    category: ["top", "shirt"],
-    gender: "female",
-    price: 138000,
-    src: ["./img/top/top_s_w_01/front.jpg", "./img/top/top_s_w_01/back.jpg"],
-    color: ["blue"],
-    isOut: false,
-    isBest: true,
-    isNew: true,
-    discountRate: 0
   }
 ]
 
@@ -259,6 +301,308 @@ const itemList = [{
     withItem: true,
     withItemID: ["bottom_short_m_01"],
     discountRate: 0
+  },{
+    id: "top_ts_m_02",
+    name: "반팔 이노베이션 포켓 티셔츠",
+    subname: "S/S INNOVATION POCKET T-SHIRT",
+    stylecode: "CA23SSTSSS00040033",
+    price: 85000,
+    rating: 5,
+    color: ["white"],
+    colorSrc: [
+      ["./img/top/top_ts_m_02/front_white.jpg", "./img/top/top_ts_m_02/back_white.jpg", "./img/top/top_ts_m_02/1.jpg", "./img/top/top_ts_m_02/2.jpg", "./img/top/top_ts_m_02/3.jpg", "./img/top/top_ts_m_02/4.jpg"]
+    ],
+    desc: ["S/S INNOVATION POCKET T-SHIRT는 오가닉 코튼100% 싱글 저지 소재의 반팔 티셔츠입니다.", "", "- 세탁 및 다림 시 그래픽의 손상 및 변형이 생길 수 있으므로, 뒤집어 세탁 및 다림을 권장합니다."],
+    size: ["S", "M", "L", "XL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_ts_m_03",
+    name: "반팔 버커루 티셔츠",
+    subname: "S/S BUCKAROO T-SHIRT",
+    stylecode: "CA23SSTSSS01020001",
+    price: 78000,
+    rating: 5,
+    color: ["brown"],
+    colorSrc: [
+      ["./img/top/top_ts_m_03/front_brown.jpg", "./img/top/top_ts_m_03/back_brown.jpg", "./img/top/top_ts_m_03/1.jpg", "./img/top/top_ts_m_03/2.jpg", "./img/top/top_ts_m_03/3.jpg", "./img/top/top_ts_m_03/4.jpg"]
+    ],
+    desc: ["S/S BUCKAROO T-SHIRT는 오가닉 코튼100% 싱글 저지 소재의 반팔 티셔츠입니다. 루즈 핏이며, 정면에 그래픽 프린트가 있습니다.", "", "- 세탁 및 다림 시 그래픽의 손상 및 변형이 생길 수 있으므로, 뒤집어 세탁 및 다림을 권장합니다."],
+    size: ["S", "M", "L", "XL","XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_ts_m_04",
+    name: "반팔 부기 티셔츠",
+    subname: "S/S BOOGIE T-SHIRT",
+    stylecode: "CA23SSTSSS11219001",
+    price: 78000,
+    rating: 5,
+    color: ["yellow"],
+    colorSrc: [
+      ["./img/top/top_ts_m_04/front_yellow.jpg", "./img/top/top_ts_m_04/back_yellow.jpg", "./img/top/top_ts_m_04/1.jpg", "./img/top/top_ts_m_04/2.jpg", "./img/top/top_ts_m_04/3.jpg", "./img/top/top_ts_m_04/4.jpg"]
+    ],
+    desc: ["S/S BOOGIE T-SHIRT는 오가닉 코튼100% 싱글 저지 소재의 반팔 티셔츠입니다. 루즈 핏이며, 정면에 그래픽 프린트가 있습니다.", "", "- 세탁 및 다림 시 그래픽의 손상 및 변형이 생길 수 있으므로, 뒤집어 세탁 및 다림을 권장합니다.","- 워싱된 제품은 밝은 계열의 제품과 함께 착용 시 이염 발생할 수 있으며, 단독 세탁을 권장합니다."],
+    size: ["S", "M", "L", "XL","XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: false,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_jacket_m_01",
+    name: "코스탈 자켓",
+    subname: "COASTAL JACKET",
+    stylecode: "CA23SSJAJL00358002",
+    price: 248000,
+    rating: 5,
+    color: ["black","white"],
+    colorSrc: [
+      ["./img/top/top_jacket_m_01/front_black.jpg", "./img/top/top_jacket_m_01/1_black.jpg", "./img/top/top_jacket_m_01/2_black.jpg", "./img/top/top_jacket_m_01/3_black.jpg", "./img/top/top_jacket_m_01/4_black.jpg"],      ["./img/top/top_jacket_m_01/front_white.jpg", "./img/top/top_jacket_m_01/1_white.jpg", "./img/top/top_jacket_m_01/2_white.jpg", "./img/top/top_jacket_m_01/3_white.jpg", "./img/top/top_jacket_m_01/4_white.jpg"]
+    ],
+    desc: ["COASTAL JACKET은 면100% 포플린 소재의 자켓입니다. ", "안감은 면 포플린 소재로 이루어져 있습니다. 후드는 팩커블 형태로 조절이 가능합니다. 정면은 지퍼와 스냅으로 여닫을 수 있습니다. 소매에 스크립트 자수가 있습니다."],
+    size: ["S", "M", "L", "XL","XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_jacket_m_02",
+    name: "살레도 자켓",
+    subname: "SALEDO JACKET",
+    stylecode: "CA23SSJAJL00760005",
+    price: 208000,
+    rating: 5,
+    color: ["blue","grey"],
+    colorSrc: [
+      ["./img/top/top_jacket_m_02/front_blue.jpg", "./img/top/top_jacket_m_02/1_blue.jpg", "./img/top/top_jacket_m_02/2_blue.jpg", "./img/top/top_jacket_m_02/3_blue.jpg", "./img/top/top_jacket_m_02/4_blue.jpg"],      ["./img/top/top_jacket_m_02/front_grey.jpg", "./img/top/top_jacket_m_02/1_grey.jpg", "./img/top/top_jacket_m_02/2_grey.jpg", "./img/top/top_jacket_m_02/3_grey.jpg", "./img/top/top_jacket_m_02/4_grey.jpg"]
+    ],
+    desc: ["SALEDO JACKET은 오가닉 코튼100% 'MAITLAND' 데님 소재의 자켓입니다. 안감이 없으며, 트리플 스티칭 되어 있습니다.", "2개의 가슴 포켓은 플랩과 버튼으로 여닫을 수 있습니다. 소매와 밑단은 둘레 조절이 가능합니다. 가슴 포켓에 스퀘어 라벨이 부착되어 있습니다.","","- 워싱된 제품은 밝은 계열의 제품과 함께 착용 시 이염 발생할 수 있으며, 단독 세탁을 권장합니다. "],
+    size: ["S", "M", "L", "XL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_jacket_m_03",
+    name: "알링 자켓",
+    subname: "ARLING JACKET",
+    stylecode: "CA23SSJAJL09320002",
+    price: 368000,
+    rating: 5,
+    color: ["black"],
+    colorSrc: [
+      ["./img/top/top_jacket_m_03/front_black.jpg", "./img/top/top_jacket_m_03/1.jpg", "./img/top/top_jacket_m_03/2.jpg", "./img/top/top_jacket_m_03/3.jpg", "./img/top/top_jacket_m_03/4.jpg"]
+    ],
+    desc: ["ARLING JACKET은 오가닉 코튼 100% 'DEARBORN' 캔버스 소재의 자켓입니다. 바디 안감은 면, 소매 안감은 나일론 소재로 이루어져 있습니다. 전체적으로 트리플 스티칭 되어 있습니다.", "후드는 둘레 조절이 가능하며, 스퀘어 라벨이 부착된 캥거루 포켓이 있습니다. 소매는 신축성이 있는 RIB-KNIT 소재이며, 정면은 이중 투웨이 지퍼와 슬라이더로 여닫을 수 있습니다. 측면 또한 스냅 버튼으로 여닫을 수 있습니다. ","","- 워싱된 제품은 밝은 계열의 제품과 함께 착용 시 이염 발생할 수 있으며, 단독 세탁을 권장합니다. "],
+    size: ["S", "M", "L", "XL","XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_jacket_m_04",
+    name: "알마 자켓",
+    subname: "ALMA JACKET",
+    stylecode: "CA23SSJAJL00699007",
+    price: 298000,
+    rating: 5,
+    color: ["black"],
+    colorSrc: [
+      ["./img/top/top_jacket_m_04/front_black.jpg", "./img/top/top_jacket_m_04/1.jpg", "./img/top/top_jacket_m_03/2.jpg", "./img/top/top_jacket_m_04/3.jpg", "./img/top/top_jacket_m_04/4.jpg"]
+    ],
+    desc: ["ALMA JACKET은 면100% 'PERRY' 데님 소재의 자켓입니다. 데님과 립스탑 소재가 믹스되어 있는 디테일이 있습니다.", "바디 안감은 면 포플린, 소매 안감은 나일론 소재로 이루어져 있습니다. 밑단 밴드는 둘레 조절이 가능하며, 정면의 포켓은 플랩과 벨크로로 여닫을 수 있습니다.","","- 워싱된 제품은 밝은 계열의 제품과 함께 착용 시 이염 발생할 수 있으며, 단독 세탁을 권장합니다. "],
+    size: [ "XL","XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_s_m_01",
+    name: "반팔 블랙 잭 셔츠",
+    subname: "S/S BLACK JACK SHIRT",
+    stylecode: "CA23SSSHSS11169001",
+    price: 143000,
+    rating: 5,
+    color: ["white"],
+    colorSrc: [
+      ["./img/top/top_s_m_01/front_white.jpg", "./img/top/top_s_m_01/1.jpg", "./img/top/top_s_m_01/2.jpg", "./img/top/top_s_m_01/3.jpg", "./img/top/top_s_m_01/4.jpg"]
+    ],
+    desc: ["S/S BLACK JACK SHIRT는 면54%, 텐셀46% 새틴 소재의 반팔 셔츠입니다. 루즈 핏이며, 올오버 프린트 형식입니다. 가먼트 워시드 처리 되어 있으며, 가슴 포켓이 있습니다."],
+    size: ["S", "M", "L", "XL","XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_s_m_02",
+    name: "반팔 바유 셔츠",
+    subname: "S/S BAYOU SHIRT",
+    stylecode: "CA23SSSHSS11167001",
+    price: 143000,
+    rating: 5,
+    color: ["red"],
+    colorSrc: [
+      ["./img/top/top_s_m_02/front_red.jpg", "./img/top/top_s_m_02/1.jpg", "./img/top/top_s_m_02/2.jpg", "./img/top/top_s_m_02/3.jpg", "./img/top/top_s_m_02/4.jpg"]
+    ],
+    desc: ["S/S BAYOU SHIRT는 서스테이너블 비스코스 포플린100% 소재의 반팔 셔츠입니다. 루즈 핏이며, 올오버 프린트 형식입니다. 가먼트 워시드 처리 되어 있으며, 코코넛 단추로 이루어져 있습니다."],
+    size: ["S", "M", "L", "XL","XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_s_m_03",
+    name: "반팔 델레이 셔츠",
+    subname: "S/S DELRAY SHIRT",
+    stylecode: "CA23SSSHSS11171001",
+    price: 118000,
+    rating: 5,
+    color: ["blue"],
+    colorSrc: [
+      ["./img/top/top_s_m_03/front_blue.jpg", "./img/top/top_s_m_03/1.jpg", "./img/top/top_s_m_03/2.jpg", "./img/top/top_s_m_03/3.jpg", "./img/top/top_s_m_03/4.jpg"]
+    ],
+    desc: ["S/S DELRAY SHIRT는 텐셀60%, 면40% 트윌 소재의 반팔 셔츠입니다. 루즈 핏이며, 가슴에 그래픽 자수가 있습니다."],
+    size: ["S", "M", "L", "XL","XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_s_m_04",
+    name: "반팔 마리나 셔츠",
+    subname: "S/S MARINA SHIRT",
+    stylecode: "CA23SSSHSS11175001",
+    price: 145000,
+    rating: 5,
+    color: ["blue"],
+    colorSrc: [
+      ["./img/top/top_s_m_04/front_blue.jpg", "./img/top/top_s_m_04/1.jpg", "./img/top/top_s_m_04/2.jpg", "./img/top/top_s_m_04/3.jpg", "./img/top/top_s_m_04/4.jpg"]
+    ],
+    desc: ["S/S MARINA SHIRT는 면54%, 텐셀46% 새틴 소재의 반팔 셔츠입니다. 루즈 핏이며, 올오버 프린트 형식입니다. 가먼트 워시드 처리 되어 있으며, 가슴 포켓이 있습니다."],
+    size: ["S", "M", "L", "XL","XXL"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_s_w_01",
+    name: "여성 반팔 로빌리아 셔츠",
+    subname: "W S/S LOVILIA SHIRT",
+    stylecode: "CA23SSSHSS00760001",
+    price: 138000,
+    rating: 5,
+    color: ["blue"],
+    colorSrc: [
+      ["./img/top/top_s_w_01/front.jpg", "./img/top/top_s_w_01/1.jpg", "./img/top/top_s_w_01/2.jpg", "./img/top/top_s_w_01/3.jpg", "./img/top/top_s_w_01/4.jpg"]
+    ],
+    desc: ["W S/S LOVILIA SHIRT는 면100% 'PERRY' 데님 소재의 반팔 셔츠입니다. 루즈 핏이며, 가슴 포켓에 스퀘어 라벨이 부착되어 있습니다.","","- 워싱된 제품은 밝은 계열의 제품과 함께 착용 시 이염 발생할 수 있으며, 단독 세탁을 권장합니다. "],
+    size: ["XS", "S"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: true,
+    withItemID: ["bottom_skirt_w_01"],
+    discountRate: 0
+  },
+  {
+    id: "top_s_w_02",
+    name: "여성 반팔 델레이 셔츠",
+    subname: "W S/S DELRAY SHIRT",
+    stylecode: "CA23SSSHSS09364002",
+    price: 115000,
+    rating: 5,
+    color: ["green"],
+    colorSrc: [
+      ["./img/top/top_s_w_02/front.jpg", "./img/top/top_s_w_02/1.jpg", "./img/top/top_s_w_02/2.jpg", "./img/top/top_s_w_02/3.jpg", "./img/top/top_s_w_02/4.jpg"]
+    ],
+    desc: ["W S/S DELRAY SHIRT는 텐셀60%, 면40% 트윌 소재의 반팔 셔츠입니다. 오픈 칼라 형태이며, 가슴에 그래픽 자수가 있습니다."],
+    size: ["XS", "S"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_jacket_w_01",
+    name: "여성 살레도 자켓",
+    subname: "W SALEDO JACKET",
+    stylecode: "CA23SSJAJL11191001",
+    price: 218000,
+    rating: 5,
+    color: ["blue","white"],
+    colorSrc: [
+      ["./img/top/top_jacket_w_01/front_blue.jpg", "./img/top/top_jacket_w_01/1_blue.jpg", "./img/top/top_jacket_w_01/2_blue.jpg", "./img/top/top_jacket_w_01/3_blue.jpg", "./img/top/top_jacket_w_01/4_blue.jpg"],
+      ["./img/top/top_jacket_w_01/front_white.jpg", "./img/top/top_jacket_w_01/1_white.jpg", "./img/top/top_jacket_w_01/2_white.jpg", "./img/top/top_jacket_w_01/3_white.jpg", "./img/top/top_jacket_w_01/4_white.jpg"]
+    ],
+    desc: ["W SALEDO JACKET은 면100% 'ALEXANDER' 트윌 소재의 자켓입니다. 안감이 없으며, 트리플 스티칭 되어 있습니다. 두개의 가슴 포켓이 있으며, 하나는 플랩과 버튼으로 여닫을 수 있습니다. 소매와 밑단은 둘레 조절이 가능합니다. 가슴 포켓에 스퀘어 라벨이 부착되어 있습니다.","","- 염색된 제품은 밝은 계열의 제품과 함께 착용 시 이염 발생할 수 있으며, 단독 세탁을 권장합니다. "],
+    size: ["XS", "S"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: false,
+    withItemID: [],
+    discountRate: 0
+  },
+  {
+    id: "top_ts_w_01",
+    name: "여성 반팔 블러쉬 티셔츠",
+    subname: "W S/S BLUSH T-SHIRT",
+    stylecode: "CA23SSTSSS11103001",
+    price: 78000,
+    rating: 5,
+    color: ["blue","black","white"],
+    colorSrc: [
+      ["./img/top/top_ts_w_01/front_blue.jpg", "./img/top/top_ts_w_01/1_blue.jpg", "./img/top/top_ts_w_01/2_blue.jpg", "./img/top/top_ts_w_01/3_blue.jpg", "./img/top/top_ts_w_01/4_blue.jpg"],
+      ["./img/top/top_ts_w_01/front_black.jpg", "./img/top/top_ts_w_01/1_black.jpg", "./img/top/top_ts_w_01/2_black.jpg", "./img/top/top_ts_w_01/3_black.jpg", "./img/top/top_ts_w_01/4_black.jpg"],
+      ["./img/top/top_ts_w_01/front_white.jpg", "./img/top/top_ts_w_01/1_white.jpg", "./img/top/top_ts_w_01/2_white.jpg", "./img/top/top_ts_w_01/3_white.jpg", "./img/top/top_ts_w_01/4_white.jpg"]
+    ],
+    desc: ["W S/S BLUSH T-SHIRT는 오가닉 코튼100% 싱글 저지 소재의 반팔 티셔츠입니다. 레귤러 핏이며, 정면 가슴에 그래픽 자수가 있습니다."],
+    size: ["XS", "S"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: true,
+    withItemID: ["bottom_pant_w_01"],
+    discountRate: 0
   },
   {
     id: "bottom_short_m_01",
@@ -278,6 +622,46 @@ const itemList = [{
     isNew: true,
     withItem: true,
     withItemID: ["top_ts_m_01"],
+    discountRate: 0
+  },
+  {
+    id: "bottom_skirt_w_01",
+    name: "여성 마스터 스커트",
+    subname: "W MASTER SKIRT",
+    stylecode: "CA23SSSKSK00692001",
+    price: 118000,
+    rating: 5,
+    color: ["black"],
+    colorSrc: [
+      ["./img/bottom/bottom_skirt_w_01/front.jpg", "./img/bottom/bottom_skirt_w_01/back.jpg", "./img/bottom/bottom_skirt_w_01/2.jpg", "./img/bottom/bottom_skirt_w_01/3.jpg", "./img/bottom/bottom_skirt_w_01/4.jpg"]
+    ],
+    desc: ["W MASTER SKIRT는 폴리에스테르65%, 면35% 'DUNMORE' 트윌 소재의 스커트입니다. 스트레이트 핏에 밑위는 레귤러 웨이스트입니다. 지퍼 플라이 형식이며, 후면에 스퀘어 라벨이 부착되어 있습니다."],
+    size: ["XS", "S"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: true,
+    withItemID: ["top_s_w_01"],
+    discountRate: 0
+  },
+  {
+    id: "bottom_pant_w_01",
+    name: "여성 심플 팬츠 페어필드",
+    subname: "W SIMPLE PANT FAIRFIELD",
+    stylecode: "CA23SSPAWO00760006",
+    price: 148000,
+    rating: 5,
+    color: ["blue"],
+    colorSrc: [
+      ["./img/bottom/bottom_pant_w_01/front.jpg", "./img/bottom/bottom_pant_w_01/back.jpg", "./img/bottom/bottom_pant_w_01/1.jpg", "./img/bottom/bottom_pant_w_01/2.jpg", "./img/bottom/bottom_pant_w_01/3.jpg"]
+    ],
+    desc: ["W SIMPLE PANT는 오가닉 코튼 100% 'FAIRFIELD' 데님 소재의 워크 팬츠입니다. 루즈 핏에 밑위는 레귤러 웨이스트입니다. 지퍼 플라이 형식입니다. 후면 포켓에 스퀘어 라벨이 부착되어 있습니다.","- 워싱된 제품은 밝은 계열의 제품과 함께 착용 시 이염 발생할 수 있으며, 단독 세탁을 권장합니다. "],
+    size: ["24", "25","26"],
+    isOut: false,
+    isBest: true,
+    isNew: true,
+    withItem: true,
+    withItemID: ["top_ts_w_01"],
     discountRate: 0
   }
 ]

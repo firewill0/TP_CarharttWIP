@@ -210,13 +210,18 @@
                     width: 40px;
                     height: 40px;
                     margin-right: 5px;
-                    color: white;
-                    background-color: #4154B1;
+                    color: black;
+                    // background-color: #4154B1;
                     border-radius: 100px;
                     text-align: center;
                     line-height: 40px;
                     font-weight: bold;
                     cursor: pointer;
+
+                    &.on {
+                        color: white;
+                        background-color: #4154B1;
+                    }
                 }
             }
 
@@ -228,6 +233,8 @@
     display: block;
     width: 100%;
     margin-top: 27px;
+    visibility: visible;
+    transition: 0.3s;
 
     & .filter_tab {
         margin-bottom: 60px;

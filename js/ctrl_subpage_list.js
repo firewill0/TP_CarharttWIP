@@ -8,6 +8,9 @@ import {
 
 const items_list = document.querySelector('.items_list');
 const pagenation = document.querySelector('.pagination');
+const subpage_left_filter = document.querySelector('.subpage_left_filter');
+const chk_filter = document.querySelector('#chk_filter');
+const label_chk_filter = document.querySelector('.label_chk_filter');
 let page = 1;
 let c = 1;
 let check = 12;
@@ -148,9 +151,13 @@ for (let i = 0; i < shoppingList_TopCount; i++) {
     }
 };
 
+
+
 console.log("PageAry: ", pageAry);
 
 const pageBtns = document.querySelectorAll('.page_btn');
+
+pageBtns[0].classList.add("on");
 
 for (let i = 0; i < pageBtns.length; i++) {
     pageBtns[i].addEventListener('click', function () {
@@ -177,5 +184,12 @@ for (let i = 0; i < pageBtns.length; i++) {
             addItem(count);
 
         }
+
+        pageBtns.forEach((pgel) => {
+            pgel.classList.remove("on");
+        });
+
+        pageBtns[i].classList.add("on");
+
     });
 }
