@@ -42,10 +42,11 @@ function addItem(index) {
 
     const item_url = document.createElement('a');
     item_url.setAttribute('class', 'item_url');
-    // let url_text = "./item_detail.html?";
-    // url_text += "id=";
-    // url_text += shoppingList_Top[index].id;
-    item_url.setAttribute('href', "./item_detail.html");
+    let url_text = "./item_detail.html?";
+    url_text += "id=";
+    url_text += shoppingList_Top[index].id;
+    item_url.setAttribute('href', url_text);
+    // item_url.setAttribute('href', "./item_detail.html");
 
 
     item_img.appendChild(item_url);

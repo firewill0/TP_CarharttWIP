@@ -1,27 +1,13 @@
-import {
-    itemList
-} from "./data.js";
+// json query 사용
+let jsonQuery = require('json-query');
 
-import {
-    setCookie,
-    getCookie
-} from "./cookie_control.js";
-// import load_param from "./load_param.js";
+const myURL = new URL(window.location.toLocaleString()).searchParams;
 
-let itemId = getCookie("id");
-let index = 0;
+const myID = myURL.get('id');
 
-let itemListCount = itemList.length;
+console.log("getId is:", myID);
 
-let KrWon = new Intl.NumberFormat('ko-KR', {
-    style: 'currency',
-    currency: 'KRW',
-});
-
-
-console.log("current id is:" + itemId + '/' + "item counter:" + itemListCount);
-
-// console.log("test");
+let itemId = myID;
 
 const itemcode = document.querySelector('.itemcode');
 const item_img = document.querySelector('.item_img');
@@ -42,241 +28,192 @@ const qna_list = document.querySelector('.qna_list');
 const item_combo_list = document.querySelector('.item_combo_list');
 const watched_item_combo_list = document.querySelector('.watched_item_combo_list');
 
-
-// for (let i = 0; i < itemListCount; i++) {
-//     if (itemId == itemList[i].id) {
-//         index = i;
-//         break;
-//     }
-// }
-
-itemList.forEach((item, itemidx) => {
-    if (itemId == item.id) {
-        index = itemidx;
-        return false;
-    };
+let KrWon = new Intl.NumberFormat('ko-KR', {
+    style: 'currency',
+    currency: 'KRW',
 });
 
-title.innerHTML = itemList[index].name;
-itemcode.innerHTML = itemList[index].stylecode;
-item_img.setAttribute('src', itemList[index].colorSrc[0][0]);
+let xhr = new XMLHttpRequest(); // 인스턴스 (객체변수보단 인스턴스라고 부르면 됨)
+xhr.open('GET', './db.json');
+xhr.send();
 
-thumbnail.forEach((value, idx) => {
-    value.setAttribute('src', itemList[index].colorSrc[0][idx]);
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log("READY");
+        let datalist = JSON.parse(xhr.responseText);
+        let items = datalist;
+        showItem(items, itemId);
+    }
+}
 
-    value.addEventListener('mouseover', function () {
-        item_img.setAttribute('src', itemList[index].colorSrc[0][idx]);
+function showItem(contents, id) {
+    console.log(contents, id);
+    let leng = contents.length;
+    console.log(leng);
+    let query = 'itemList[id=' + id + ']';
+    let qResult = jsonQuery(query, {
+        data: contents
+    }).value;
+
+    console.log(qResult);
+
+    title.innerHTML = qResult.name;
+    itemcode.innerHTML = qResult.stylecode;
+    item_img.setAttribute('src', qResult.colorSrc[0][0]);
+    price.innerHTML = KrWon.format(qResult.price);
+
+    thumbnail.forEach((value, idx) => {
+        value.setAttribute('src', qResult.colorSrc[0][idx]);
+
+        value.addEventListener('mouseover', function () {
+            item_img.setAttribute('src', qResult.colorSrc[0][idx]);
+        });
     });
-});
 
-price.innerHTML = KrWon.format(itemList[index].price);
+    if (qResult.isBest) {
+        bestTag.style.display = "block";
+    } else {
+        bestTag.style.display = "none";
+    }
 
-if (itemList[index].isBest) {
-    bestTag.style.display = "block";
-} else {
-    bestTag.style.display = "none";
-}
+    if (qResult.isNew) {
+        newTag.style.display = "block";
+    } else {
+        newTag.style.display = "none";
+    }
 
-if (itemList[index].isNew) {
-    newTag.style.display = "block";
-} else {
-    newTag.style.display = "none";
-}
+    save.innerHTML = KrWon.format(qResult.price * 0.005);
 
-save.innerHTML = KrWon.format(itemList[index].price * 0.005);
+    desc_detail.innerHTML = "";
+    for (let i = 0; i < qResult.desc.length; i++) {
+        desc_detail.innerHTML += qResult.desc[i];
+        desc_detail.innerHTML += "<br />";
+    }
 
-desc_detail.innerHTML = "";
-for (let i = 0; i < itemList[index].desc.length; i++) {
-    desc_detail.innerHTML += itemList[index].desc[i];
-    desc_detail.innerHTML += "<br />";
-}
 
-let colorList = itemList[index].colorSrc;
+    let colorList = qResult.colorSrc;
 
-colorList.forEach((color) => {
-    const color_img = document.createElement('img');
-    color_img.setAttribute('src', color[0]);
-    color_box.appendChild(color_img);
-    color_img.addEventListener('click', function () {
-        let mainImg = color[0];
-        item_img.setAttribute('src', mainImg);
-        thumbnail.forEach((value, idx_c) => {
-            let thumImg = color[idx_c];
-            value.setAttribute('src', thumImg);
+    colorList.forEach((color) => {
+        const color_img = document.createElement('img');
+        color_img.setAttribute('src', color[0]);
+        color_box.appendChild(color_img);
+        color_img.addEventListener('click', function () {
+            let mainImg = color[0];
+            item_img.setAttribute('src', mainImg);
+            thumbnail.forEach((value, idx_c) => {
+                let thumImg = color[idx_c];
+                value.setAttribute('src', thumImg);
 
-            value.addEventListener('mouseover', function () {
-                item_img.setAttribute('src', thumImg);
+                value.addEventListener('mouseover', function () {
+                    item_img.setAttribute('src', thumImg);
+                });
             });
         });
     });
-});
 
 
-let sizeList = itemList[index].size;
+    let sizeList = qResult.size;
 
-sizeList.forEach((sizeItem) => {
-    let size = document.createElement('div');
-    size.innerHTML = sizeItem;
-    size.setAttribute('class', 'size');
-    size_box.appendChild(size);
+    sizeList.forEach((sizeItem) => {
+        let size = document.createElement('div');
+        size.innerHTML = sizeItem;
+        size.setAttribute('class', 'size');
+        size_box.appendChild(size);
 
-    size.addEventListener('click', function () {
-        let size_list = document.querySelectorAll('.size');
-        for (let i = 0; i < size_list.length; i++) {
-            if (size_list[i].classList.contains("sizechecked")) {
-                size_list[i].classList.remove("sizechecked");
+        size.addEventListener('click', function () {
+            let size_list = document.querySelectorAll('.size');
+            for (let i = 0; i < size_list.length; i++) {
+                if (size_list[i].classList.contains("sizechecked")) {
+                    size_list[i].classList.remove("sizechecked");
+                };
             };
-        };
 
-        this.classList.add("sizechecked");
+            this.classList.add("sizechecked");
+        });
     });
-});
 
-if (itemList[index].withItem) {
+    if (qResult.withItem) {
 
-    for (let i = 0; i < itemList[index].withItemID.length; i++) {
-        if (i > 3) {
-            break;
+        for (let i = 0; i < qResult.withItemID.length; i++) {
+            if (i > 3) {
+                break;
+            }
+
+            let getwItem = qResult.withItemID[i];
+
+            let wquery = 'itemList[id=' + getwItem + ']';
+            let wResult = jsonQuery(wquery, {
+                data: contents
+            }).value;
+
+            let wItem = document.createElement('div');
+            wItem.setAttribute('class', 'item');
+            let wItem_img = document.createElement('img');
+            wItem_img.setAttribute('src', wResult.colorSrc[0][0]);
+            let wItem_desc = document.createElement('p');
+            wItem_desc.setAttribute('class', 'item_name');
+            wItem_desc.innerHTML = wResult.name;
+            let wItem_price = document.createElement('p');
+            wItem_price.setAttribute('class', 'item_price');
+            wItem_price.innerHTML = KrWon.format(wResult.price);
+
+            wItem.appendChild(wItem_img);
+            wItem.appendChild(wItem_desc);
+            wItem.appendChild(wItem_price);
+
+            wItem.addEventListener("click", function () {
+                let gotoUrl = "./item_detail.html?id=" + wResult.id;
+                location.href = gotoUrl;
+            });
+            item_combo_list.appendChild(wItem);
         }
-
-        let getwItem = itemList[index].withItemID[i];
-        let getIdx = 0;
-
-        itemList.forEach((getwItem_original, wItemidx) => {
-            if (getwItem == getwItem_original.id) {
-                getIdx = wItemidx;
-                return false;
-            };
-        });
-
-
-        let wItem = document.createElement('div');
-        wItem.setAttribute('class', 'item');
-        let wItem_img = document.createElement('img');
-        wItem_img.setAttribute('src', itemList[getIdx].colorSrc[0][0]);
-        let wItem_desc = document.createElement('p');
-        wItem_desc.setAttribute('class', 'item_name');
-        wItem_desc.innerHTML = itemList[getIdx].name;
-        let wItem_price = document.createElement('p');
-        wItem_price.setAttribute('class', 'item_price');
-        wItem_price.innerHTML = KrWon.format(itemList[getIdx].price);
-
-        wItem.appendChild(wItem_img);
-        wItem.appendChild(wItem_desc);
-        wItem.appendChild(wItem_price);
-
-        wItem.addEventListener("click", function () {
-            // event.preventDefault();
-            setCookie("id", itemList[getIdx].id);
-            location.href = "./item_detail.html";
-            // console.log(getCookie("id"));
-            // location.href = "./item_detail.html";
-        });
-        item_combo_list.appendChild(wItem);
     }
 
-
-}
-
-
-let rvlist = getCookie("rvlist");
-
-if (rvlist == "" || rvlist == " ") {
-    let rvlist_new = [];
-    rvlist_new.unshift(itemId);
-    setCookie("rvlist", JSON.stringify(rvlist_new));
-    console.log(getCookie("rvlist"));
-} else {
-    let getRvlist_json = getCookie("rvlist");
-    let getRvlist = JSON.parse(getRvlist_json);
-
-    console.log(getRvlist);
-
-    if (getRvlist.length >= 4) {
-        for (let i = 0; i < 4; i++) {
-            let rvel = getRvlist[i];
-
-            let rvelIdx = 0;
-
-            if (rvel != itemId) {
-                itemList.forEach((rvitem, rvitemidx) => {
-                    if (rvel == rvitem.id) {
-                        rvelIdx = rvitemidx;
-                        return false;
-                    };
-                });
-
-                let rvItem = document.createElement('div');
-                rvItem.setAttribute('class', 'watched_item item');
-                let rvItem_img = document.createElement('img');
-                rvItem_img.setAttribute('src', itemList[rvelIdx].colorSrc[0][0]);
-                let rvItem_desc = document.createElement('p');
-                rvItem_desc.setAttribute('class', 'item_name');
-                rvItem_desc.innerHTML = itemList[rvelIdx].name;
-                let rvItem_price = document.createElement('p');
-                rvItem_price.setAttribute('class', 'item_price');
-                rvItem_price.innerHTML = KrWon.format(itemList[rvelIdx].price);
-
-                rvItem.appendChild(rvItem_img);
-                rvItem.appendChild(rvItem_desc);
-                rvItem.appendChild(rvItem_price);
-
-                rvItem.addEventListener("click", function () {
-                    // event.preventDefault();
-                    setCookie("id", itemList[rvelIdx].id);
-                    location.href = "./item_detail.html";
-                    // console.log(getCookie("id"));
-                    // location.href = "./item_detail.html";
-                });
-                watched_item_combo_list.appendChild(rvItem);
-            };
+    let rvlist = JSON.parse(sessionStorage.rvlist);
+    console.log(rvlist);
+    let new_arr = rvlist;
+    let rvCounter = 0;
 
 
+    new_arr.unshift(itemId);
+    let getRvlistUnique = [...new Set(new_arr)];
+    sessionStorage.setItem("rvlist", JSON.stringify(getRvlistUnique));
 
-        }
-    } else {
-        for (let i = 0; i < getRvlist.length - 1; i++) {
-            let rvel = getRvlist[i];
-            let rvelIdx = 0;
+    console.log(sessionStorage.rvlist);
 
-            if (rvel != itemId) {
-                itemList.forEach((rvitem, rvitemidx) => {
-                    if (rvel == rvitem.id) {
-                        rvelIdx = rvitemidx;
-                        return false;
-                    };
-                });
 
-                let rvItem = document.createElement('div');
-                rvItem.setAttribute('class', 'watched_item item');
-                let rvItem_img = document.createElement('img');
-                rvItem_img.setAttribute('src', itemList[rvelIdx].colorSrc[0][0]);
-                let rvItem_desc = document.createElement('p');
-                rvItem_desc.setAttribute('class', 'item_name');
-                rvItem_desc.innerHTML = itemList[rvelIdx].name;
-                let rvItem_price = document.createElement('p');
-                rvItem_price.setAttribute('class', 'item_price');
-                rvItem_price.innerHTML = KrWon.format(itemList[rvelIdx].price);
+    console.log(new_arr.length);
 
-                rvItem.appendChild(rvItem_img);
-                rvItem.appendChild(rvItem_desc);
-                rvItem.appendChild(rvItem_price);
+    new_arr.forEach((element) => {
+        let rvquery = 'itemList[id=' + element + ']';
+        let rvResult = jsonQuery(rvquery, {
+            data: contents
+        }).value;
 
-                rvItem.addEventListener("click", function () {
-                    // event.preventDefault();
-                    setCookie("id", itemList[rvelIdx].id);
-                    location.href = "./item_detail.html";
-                    // console.log(getCookie("id"));
-                    // location.href = "./item_detail.html";
-                });
-                watched_item_combo_list.appendChild(rvItem);
-            };
+        if (element !== itemId && rvCounter < 3) {
+            let rvItem = document.createElement('div');
+            rvItem.setAttribute('class', 'watched_item item');
+            let rvItem_img = document.createElement('img');
+            rvItem_img.setAttribute('src', rvResult.colorSrc[0][0]);
+            let rvItem_desc = document.createElement('p');
+            rvItem_desc.setAttribute('class', 'item_name');
+            rvItem_desc.innerHTML = rvResult.name;
+            let rvItem_price = document.createElement('p');
+            rvItem_price.setAttribute('class', 'item_price');
+            rvItem_price.innerHTML = KrWon.format(rvResult.price);
+
+            rvItem.appendChild(rvItem_img);
+            rvItem.appendChild(rvItem_desc);
+            rvItem.appendChild(rvItem_price);
+
+            rvItem.addEventListener("click", function () {
+                let newurl = "./item_detail.html?id=" + element;
+                location.href = newurl;
+            });
+            watched_item_combo_list.appendChild(rvItem);
+            rvCounter++;
         }
 
-    }
+    });
 
-    getRvlist.unshift(itemId);
-    let getRvlistUnique = [...new Set(getRvlist)];
-    setCookie("rvlist", JSON.stringify(getRvlistUnique));
-    console.log(getCookie("rvlist"));
 }
