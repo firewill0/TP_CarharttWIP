@@ -231,7 +231,7 @@
             "gender": "male",
             "price": 143000,
             "src": ["./img/top/top_s_m_01/front_white.jpg", "./img/top/top_s_m_01/back_white.jpg"],
-            "color": ["black", "black"],
+            "color": ["white"],
             "isOut": false,
             "isBest": true,
             "isNew": true,
