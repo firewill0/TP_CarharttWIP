@@ -18,9 +18,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <script src="./js/lnb_img.js" type="module"></script> -->
 
-    <!-- <script src="./js/subpage_filter.js" type="module"></script> -->
+    <script src="./js/subpage_filter.js" type="module"></script>
+    <script src="./js/subpage_filter_ctrl.js" type="module"></script>
     <script src="./js/ctrl_subpage_list.js" type="module"></script>
 
     <script src="./js/top_ctrl.js" type="module"></script>
@@ -45,12 +49,12 @@
                 TOP
             </div>
             <div class="subpage_left_cat">
-                <a href="#">전체</a>
-                <a href="#">자켓</a>
-                <a href="#">스웨터</a>
-                <a href="#">니트</a>
-                <a href="#">셔츠</a>
-                <a href="#">티셔츠</a>
+                <a href="#!">전체</a>
+                <a href="#!">자켓</a>
+                <a href="#!">스웨터</a>
+                <a href="#!">니트</a>
+                <a href="#!">셔츠</a>
+                <a href="#!">티셔츠</a>
                 <div class="line"></div>
             </div>
             <div class="subpage_left_filter">
@@ -71,50 +75,38 @@
                     <label for="chk_price_5"> <input type="checkbox" name="chk_price_5" class="checkbox_price"
                             id="chk_price_5"> 500,000원 ~
                     </label>
+                    <label for="chk_price_6"> <input type="checkbox" name="chk_price_6" class="checkbox_price"
+                            id="chk_price_6"> 해제
+                    </label>
                 </div>
                 <div class="filter_color filter_tab">
                     <p>색상</p>
-                    <label class="color_black" for="chk_color_1"><input type="checkbox" name="chk_color_1"
-                            class="checkbox_color" id="chk_color_1">
+                    <label class="color_black" for="chk_color_black"><input type="checkbox" name="chk_color_1"
+                            class="checkbox_color" id="chk_color_black">
                     </label>
-                    <label for="chk_color_2" class="color_blue"> <input type="checkbox" name="chk_color_2"
-                            class="checkbox_price" id="chk_color_2">
+                    <label for="chk_color_white" class="color_white"><input type="checkbox" name="chk_color_7"
+                            class="checkbox_color" id="chk_color_white">
                     </label>
-                    <label for="chk_color_3" class="color_red"> <input type="checkbox" name="chk_color_3"
-                            class="checkbox_price" id="chk_color_3">
+                    <label for="chk_color_yellow" class="color_yellow"> <input type="checkbox" name="chk_color_4"
+                            class="checkbox_color" id="chk_color_yellow">
                     </label>
-                    <label for=chk_color_4" class="color_yellow"> <input type="checkbox" name="chk_color_4"
-                            class="checkbox_price" id="chk_color_4">
+                    <label for="chk_color_grey" class="color_grey"> <input type="checkbox" name="chk_color_8"
+                            class="checkbox_color" id="chk_color_grey">
                     </label>
-                    <label for="chk_color_5" class="color_green"> <input type="checkbox" name="chk_color_5"
-                            class="checkbox_price" id="chk_color_5">
+                    <label for="chk_color_brown" class="color_brown"> <input type="checkbox" name="chk_color_5"
+                            class="checkbox_color" id="chk_color_brown">
                     </label>
-                    <label for="chk_color_6" class="color_magenta"> <input type="checkbox" name="chk_color_6"
-                            class="checkbox_price" id="chk_color_6">
+                    <label for="chk_color_green" class="color_green"> <input type="checkbox" name="chk_color_5"
+                            class="checkbox_color" id="chk_color_green">
                     </label>
-                    <label for="chk_color_7" class="color_white"><input type="checkbox" name="chk_color_7"
-                            class="checkbox_color" id="chk_color_7">
+                    <label for="chk_color_blue" class="color_blue"> <input type="checkbox" name="chk_color_2"
+                            class="checkbox_color" id="chk_color_blue">
                     </label>
-                    <label for="chk_color_8" class="color_grey"> <input type="checkbox" name="chk_color_8"
-                            class="checkbox_price" id="chk_color_8">
+                    <label for="chk_color_red" class="color_red"> <input type="checkbox" name="chk_color_3"
+                            class="checkbox_color" id="chk_color_red">
                     </label>
-                    <label for="chk_color_9" class="color_pink"> <input type="checkbox" name="chk_color_9"
-                            class="checkbox_price" id="chk_color_9">
-                    </label>
-                    <label for=chk_color_10" class="color_darkorange"> <input type="checkbox" name="chk_color_10"
-                            class="checkbox_price" id="chk_color_10">
-                    </label>
-                    <label for="chk_color_11" class="color_lightgrey"> <input type="checkbox" name="chk_color_11"
-                            class="checkbox_price" id="chk_color_11">
-                    </label>
-                    <label for="chk_color_12" class="color_orange"> <input type="checkbox" name="chk_color_12"
-                            class="checkbox_price" id="chk_color_12">
-                    </label>
-                    <label for="chk_color_13" class="color_limegreen"> <input type="checkbox" name="chk_color_13"
-                            class="checkbox_price" id="chk_color_13">
-                    </label>
-                    <label for="chk_color_14" class="color_darkblue"> <input type="checkbox" name="chk_color_14"
-                            class="checkbox_price" id="chk_color_14">
+                    <label for="chk_color_all" class="color_all">
+                        <input type="checkbox" name="chk_color_all" class="checkbox_color" id="chk_color_all">
                     </label>
                 </div>
                 <div class="filter_discount filter_tab">
@@ -124,20 +116,21 @@
                         0%~30%
                     </label>
                     <label for="chk_discount_2">
-                        <input type="checkbox" name="chk_discount_2" class="checkbox_price" id="chk_discount_2">
+                        <input type="checkbox" name="chk_discount_2" class="checkbox_discount" id="chk_discount_2">
                         30%~50%
                     </label>
                     <label for="chk_discount_3">
-                        <input type="checkbox" name="chk_discount_3" class="checkbox_price" id="chk_discount_3">
+                        <input type="checkbox" name="chk_discount_3" class="checkbox_discount" id="chk_discount_3">
                         50%~70%
                     </label>
                     <label for="chk_discount_4">
-                        <input type="checkbox" name="chk_discount_4" class="checkbox_price" id="chk_discount_4">
+                        <input type="checkbox" name="chk_discount_4" class="checkbox_discount" id="chk_discount_4">
                         70% 이상
                     </label>
                 </div>
             </div>
         </div>
+        <input type="checkbox" name="chk_filter" id="chk_filter">
         <div class="subpage_right">
             <div class="subpage_right_top">
                 <div class="gender_cat">
@@ -157,13 +150,12 @@
                         <option value="low">가격낮은순</option>
                         <option value="high">가격높은순</option>
                     </select>
-                    <label class="label_chk_filter" for="chk_filter">
+                    <div class="label_chk_filter" for="chk_filter">
                         <p>필터</p>
-                        <input type="checkbox" name="chk_filter" id="chk_filter">
                         <div class="filter_box">
                             <div class="filter_circle"></div>
                         </div>
-                    </label>
+                    </div>
                 </div>
             </div>
             <a class="dummya" href="./item_detail.html" class="item_url"></a>

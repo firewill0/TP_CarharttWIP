@@ -8,13 +8,10 @@ import {
 
 const items_list = document.querySelector('.items_list');
 const pagenation = document.querySelector('.pagination');
-const subpage_left_filter = document.querySelector('.subpage_left_filter');
-const chk_filter = document.querySelector('#chk_filter');
-const label_chk_filter = document.querySelector('.label_chk_filter');
 let page = 1;
-let c = 1;
+let itemCounter = 1;
 let check = 12;
-let cut = 0;
+let itemCutNum = 0;
 let tempNum = 0;
 let pageAry = [];
 
@@ -121,76 +118,82 @@ function addItem(index) {
     });
 };
 
-if (shoppingList_TopCount < 12) {
-    for (let i = 0; i < shoppingList_TopCount; i++) {
-        addItem(i);
-    }
-} else {
-    for (let i = 0; i < 12; i++) {
-        addItem(i);
-    }
-}
+pageMaker(shoppingList_TopCount);
 
-for (let i = 0; i < shoppingList_TopCount; i++) {
-    pageAry[page - 1] = c;
-    if (c > 11) {
-        cut++;
-        check = check * cut;
-
-        if ((shoppingList_TopCount - check) > 0) {
-            page = page + 1;
-            c = 1;
-            console.log(page, c);
-            const pageBtn = document.createElement('div');
-            pageBtn.setAttribute('class', 'page_btn');
-            pageBtn.innerText = page;
-            pagenation.appendChild(pageBtn);
+function pageMaker(getValue) {
+    if (getValue < 12) {
+        for (let i = 0; i < getValue; i++) {
+            addItem(i);
         }
     } else {
-        console.log(page, c);
-        c = c + 1;
+        for (let i = 0; i < 12; i++) {
+            addItem(i);
+        }
+    }
+
+    for (let i = 0; i < getValue; i++) {
+        pageAry[page - 1] = itemCounter;
+        if (itemCounter > 11) {
+            itemCutNum++;
+            check = check * itemCutNum;
+
+            if ((getValue - check) > 0) {
+                page = page + 1;
+                itemCounter = 1;
+                console.log(page, itemCounter);
+                const pageBtn = document.createElement('div');
+                pageBtn.setAttribute('class', 'page_btn');
+                pageBtn.innerText = page;
+                pagenation.appendChild(pageBtn);
+            }
+        } else {
+            console.log(page, itemCounter);
+            itemCounter = itemCounter + 1;
+        }
+    };
+
+
+
+    console.log("PageAry: ", pageAry);
+
+    const pageBtns = document.querySelectorAll('.page_btn');
+
+    pageBtns[0].classList.add("on");
+
+    for (let i = 0; i < pageBtns.length; i++) {
+        pageBtns[i].addEventListener('click', function () {
+            console.log('this is a ' + i + 'page');
+            let num = 12;
+
+            num = num * i;
+
+            tempNum = getValue;
+            tempNum = tempNum - num;
+
+            console.log("num:  " + num + "tempnum:  " + tempNum);
+
+            while (items_list.hasChildNodes()) {
+                items_list.removeChild(items_list.firstChild);
+            }
+
+            let Loopcount = pageAry[i];
+
+            for (let i = 0; i < Loopcount; i++) {
+                let count = num + i;
+                console.log("count is  ", count);
+
+                addItem(count);
+
+            }
+
+            pageBtns.forEach((pgel) => {
+                pgel.classList.remove("on");
+            });
+
+            pageBtns[i].classList.add("on");
+
+        });
     }
 };
 
-
-
-console.log("PageAry: ", pageAry);
-
-const pageBtns = document.querySelectorAll('.page_btn');
-
-pageBtns[0].classList.add("on");
-
-for (let i = 0; i < pageBtns.length; i++) {
-    pageBtns[i].addEventListener('click', function () {
-        console.log('this is a ' + i + 'page');
-        let num = 12;
-
-        num = num * i;
-
-        tempNum = shoppingList_TopCount;
-        tempNum = tempNum - num;
-
-        console.log("num:  " + num + "tempnum:  " + tempNum);
-
-        while (items_list.hasChildNodes()) {
-            items_list.removeChild(items_list.firstChild);
-        }
-
-        let Loopcount = pageAry[i];
-
-        for (let i = 0; i < Loopcount; i++) {
-            let count = num + i;
-            console.log("count is  ", count);
-
-            addItem(count);
-
-        }
-
-        pageBtns.forEach((pgel) => {
-            pgel.classList.remove("on");
-        });
-
-        pageBtns[i].classList.add("on");
-
-    });
-}
+export {addItem, pageMaker}; 

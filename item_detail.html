@@ -26,10 +26,13 @@
     <script src="./js/review_ctrl.js" type="module"></script>
     <script src="./js/top_ctrl.js" type="module"></script>
     <script src="./js/qna_ctrl.js" type="module"></script>
+    <script src="./js/sizecheck_ctrl.js" type="module"></script>
 </head>
 
 <body>
+    <include src="./parts/sizecheck.html"></include>
     <include src="./parts/header.html"></include>
+
     <section class="section_item_detail">
         <div class="detail_top">
             <div class="item_detail_left">
@@ -257,7 +260,7 @@
             <div class="desc desc_qna">
                 <h1>제품에 관한 궁금한 점을 올리시면 신속한 답변을 드립니다.</h1>
                 <h2>배송,결제,교환/반품 등에 대한 문의는 <span>고객센터>이메일상담</span>을 이용해주세요.</h2>
-                <a class="btn_qnaList" href="#!">문의하기</a>
+                <a class="btn_qnaList" href="#qna_write_box_id">문의하기</a>
                 <p class="qna_title">전체 (총 <span class="qna_counter"></span>건)</p>
                 <ul class="qna_list">
                     <li class="qna_detail">
@@ -305,7 +308,7 @@
                     </li>
                 </ul>
                 <!-- <div class="btn_writeQNA">글쓰기</div> -->
-                <div class="qna_write_box">
+                <div class="qna_write_box" id="qna_write_box_id">
                     <div class="qna_box">
                         <div class="name_section qna_section">
                             <p>ID:</p>

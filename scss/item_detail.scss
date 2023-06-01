@@ -1,3 +1,168 @@
+// body{
+//     overflow-y: hidden;
+// }
+
+.sizecheck_outer {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    transition: 0.3s;
+
+
+    .sizecheck_box {
+        position: absolute;
+        width: 1024px;
+        height: 512px;
+        background-color: #fff6f8;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+        .sizecheck_title {
+            display: block;
+            width: 100%;
+            height: 50px;
+            font-size: 24px;
+            line-height: 50px;
+            font-family: 'Permanent Marker', cursive;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .sizeclose {
+            position: absolute;
+            right: -80px;
+            top: 0;
+            width: 65px;
+            height: 65px;
+            border-radius: 100px;
+            background-color: #ddd;
+            text-align: center;
+            line-height: 65px;
+            font-size: 40px;
+            font-family: 'Permanent Marker', cursive;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #FFBF00;
+
+            }
+        }
+
+        .sizecheck {
+            width: 87%;
+            height: 80%;
+            background-color: #fff;
+            display: flex;
+            border: 1px solid #bbb;
+            box-sizing: border-box;
+
+            &>div {
+                width: 50%;
+                // border: 1px solid black;
+                box-sizing: border-box;
+            }
+
+            & .sizecheck_l {
+
+                .size_search_title {
+                    text-align: center;
+                    margin-top: 15px;
+                    font-family: 'Permanent Marker', cursive;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+                .size_input_form {
+                    margin-top: 15px;
+                    margin-left: 145px;
+                    margin-bottom: 15px;
+
+                    p {
+                        span {
+                            font-size: 12px;
+                            color: #717171;
+                        }
+                    }
+
+                    .btn_getSize {
+                        margin-top: 25px;
+                        width: 173px;
+                        height: 40px;
+                        background-color: #474747;
+                        text-align: center;
+                        line-height: 40px;
+                        color: white;
+                        font-weight: bold;
+                        cursor: pointer;
+                        user-select: none;
+                        transition: 0.3s;
+
+                        &:hover {
+                            background-color: #4136BF;
+                        }
+                    }
+                    .size_alert {
+                        font-size: 12px;
+                        color: #333;
+                        transition: 0.3s;
+                        opacity: 0;
+                    }
+                }
+
+                .size_result {
+                    .size_result_title {
+                        text-align: center;
+                        font-weight: bold;
+                    }
+
+                    .size_result_box {
+                        width: 107px;
+                        height: 40px;
+                        background-color: #FFBF00;
+                        text-align: center;
+                        font-size: 24px;
+                        font-weight: bold;
+                        border-radius: 25px;
+                        margin: 0 auto;
+                        margin-top: 15px;
+                    }
+
+                    .size_desc {
+                        display: block;
+                        width: 80%;
+                        text-align: center;
+                        margin: 0 auto;
+                        margin-top: 15px;
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: #717171;
+                    }
+                }
+            }
+
+            & .sizecheck_r {
+                .sizechart_img {
+                    width: 63%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
+}
+
 .section_item_detail {
     width: 1245px;
     margin: 0 auto;
@@ -780,6 +945,7 @@
                         cursor: pointer;
                         user-select: none;
                         color: #333;
+                        margin-left: 15px;
                     }
 
                     &>.reply_box {

@@ -7,7 +7,7 @@ w = innerWidth;
 let body = document.querySelector("body");
 let body_ch = body.clientHeight;
 
-target_height_sub = body_ch * 0.7;
+target_height_sub = body_ch * 0.8;
 target_height = body_ch - target_height_sub;
 
 function toggle(display, opacity) {
@@ -33,7 +33,7 @@ window.addEventListener('resize', function () {
     w = innerWidth;
     body_ch = body.clientHeight;
 
-    target_height_sub = body_ch * 0.7;
+    target_height_sub = body_ch * 0.8;
     target_height = body_ch - target_height_sub;
 
 });

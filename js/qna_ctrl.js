@@ -129,12 +129,13 @@ btn_qnaOk.addEventListener('click', function () {
     newReply.innerHTML = `<i class="far fa-comment-dots"></i>`;
 
     newReply.addEventListener('click', function () {
-        let parent = newReply.parentNode;
+        let parent = this.parentNode;
+        console.log("parent node:", parent);
 
         let getQnAID = parent.getAttribute('id');
         console.log(parent, getQnAID);
         qna_answer_box.style.display = "block";
-        addQnAReply(parent);
+        addQnAReply(getQnAID);
     });
 
 
@@ -150,7 +151,7 @@ btn_qnaOk.addEventListener('click', function () {
     let qna_list_child = qna_list.children.length;
     console.log(qna_list_child);
     qna_counter.innerHTML = qna_list_child;
-    let newQnA_ID = "newQnAID" + qna_list_child
+    let newQnA_ID = "newQnAID" + qna_list_child + "_" + Math.floor(Math.random() * 1000);
     newQnA.setAttribute('id', newQnA_ID);
 
     qna_write_box.style.display = "none";
@@ -189,40 +190,52 @@ function addQnAAnswer(ele) {
 }
 
 function addQnAReply(El_get) {
+    console.log(El_get);
+
+    let getElRe = document.getElementById(El_get);
+    console.log('getElRe', getElRe);
+
     btn_qna_answerOk.addEventListener('click', function () {
-        console.log(El_get);
-        let answer_text = qna_answer_text_id.value;
-        El_get.querySelector('.qna_status').innerHTML = "답변완료";
 
-        let reply_box = document.createElement('div');
-        reply_box.setAttribute('class', 'reply_box');
+        if (!(getElRe.classList.contains('answered'))) {
+            let answer_text = qna_answer_text_id.value;
+            getElRe.querySelector('.qna_status').innerHTML = "답변완료";
+    
+            let reply_box = document.createElement('div');
+            reply_box.setAttribute('class', 'reply_box');
+    
+            let reply_status = document.createElement('p');
+            reply_status.innerHTML = "답변";
+            reply_status.setAttribute('class', 'reply_status');
+    
+            let reply_answer = document.createElement('div');
+            reply_answer.setAttribute('class', 'reply_answer');
+    
+            let reply_who = document.createElement('p');
+            reply_who.innerHTML = `<i class='fas fa-reply fa-rotate-180'></i>[CARHARTT] 관리자`;
+            reply_who.setAttribute('class', 'reply_who');
+    
+            let reply_text = document.createElement('p');
+            reply_text.innerHTML = answer_text;
+            reply_text.setAttribute('class', 'reply_text');
+    
+            reply_answer.appendChild(reply_who);
+            reply_answer.appendChild(reply_text);
+    
+            reply_box.appendChild(reply_status);
+            reply_box.appendChild(reply_answer);
+    
+            getElRe.appendChild(reply_box);
+    
+            qna_answer_box.style.display = "none";
 
-        let reply_status = document.createElement('p');
-        reply_status.innerHTML = "답변";
-        reply_status.setAttribute('class', 'reply_status');
+            getElRe.classList.add('answered');
+            getElRe.classList.remove('notanswer');
+    
+            // qna_answer_text_id.value = "";
+        };
 
-        let reply_answer = document.createElement('div');
-        reply_answer.setAttribute('class', 'reply_answer');
-
-        let reply_who = document.createElement('p');
-        reply_who.innerHTML = `<i class='fas fa-reply fa-rotate-180'></i>[CARHARTT] 관리자`;
-        reply_who.setAttribute('class', 'reply_who');
-
-        let reply_text = document.createElement('p');
-        reply_text.innerHTML = answer_text;
-        reply_text.setAttribute('class', 'reply_text');
-
-        reply_answer.appendChild(reply_who);
-        reply_answer.appendChild(reply_text);
-
-        reply_box.appendChild(reply_status);
-        reply_box.appendChild(reply_answer);
-
-        El_get.appendChild(reply_box);
-
-        qna_answer_box.style.display = "none";
-
-        qna_answer_text_id.value = "";
+        
     });
 }
 

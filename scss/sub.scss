@@ -77,6 +77,10 @@
         }
     }
 
+    #chk_filter {
+        display: none;
+    }
+
     & .subpage_right {
         width: calc(100% - 315px);
         box-sizing: border-box;
@@ -141,10 +145,6 @@
                         margin-right: 5px;
                     }
 
-                    #chk_filter {
-                        display: none;
-                    }
-
                     .filter_box {
                         display: block;
                         width: 45px;
@@ -167,14 +167,6 @@
                             left: -3px;
                             top: -2px;
                             transition: 0.3s;
-                        }
-                    }
-
-                    #chk_filter:checked~.filter_box {
-                        background-color: #4154B1;
-
-                        .filter_circle {
-                            left: 27px;
                         }
                     }
                 }
@@ -233,7 +225,8 @@
     display: block;
     width: 100%;
     margin-top: 27px;
-    visibility: visible;
+    visibility: hidden;
+    opacity: 0;
     transition: 0.3s;
 
     & .filter_tab {
@@ -279,23 +272,23 @@
         }
 
         label.color_blue {
-            background-color: #5B6CFF;
+            background-color: blue;
         }
 
         label.color_red {
-            background-color: #FF5656;
+            background-color: red;
         }
 
         label.color_yellow {
-            background-color: #FCFF66;
+            background-color: yellow;
         }
 
         label.color_green {
-            background-color: #C6C7A5;
+            background-color: green;
         }
 
-        label.color_magenta {
-            background-color: #BF75CB;
+        label.color_brown {
+            background-color: brown;
         }
 
         label.color_white {
@@ -304,8 +297,45 @@
         }
 
         label.color_grey {
-            background-color: #9B9B9B;
+            background-color: grey;
         }
+
+        label.color_all {
+            background-color: white;
+            border: 1px solid #ccc;
+            position: relative;
+            &::before {
+                position: absolute;
+                display: block;
+                content: "";
+                left: 9px;
+                top: 2px;
+                width: 1px;
+                height: 15px;
+                background-color: #ccc;
+                transform: rotate(45deg);
+            }
+            &::after {
+                position: absolute;
+                display: block;
+                content: "";
+                right: 8px;
+                top: 2px;
+                width: 1px;
+                height: 15px;
+                background-color: #ccc;
+                transform: rotate(315deg);
+            }
+        }
+
+
+
+        label.color_magenta {
+            background-color: #BF75CB;
+        }
+
+
+
 
         label.color_pink {
             background-color: #FFBBBB;
