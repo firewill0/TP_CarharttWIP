@@ -67,7 +67,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230602,
+            "buycount":450
         },
         {
             "id": "top_ts_m_02",
@@ -81,7 +83,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230601,
+            "buycount":480
         },
         {
             "id": "top_ts_m_03",
@@ -95,7 +99,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230602,
+            "buycount":240
         },
         {
             "id": "top_ts_m_04",
@@ -109,7 +115,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": false,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230531,
+            "buycount":85
         },
         {
             "id": "top_s_w_01",
@@ -123,7 +131,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230528,
+            "buycount":872
         },
         {
             "id": "top_s_w_02",
@@ -137,7 +147,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230529,
+            "buycount":650
         },
         {
             "id": "top_jacket_w_01",
@@ -151,7 +163,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230524,
+            "buycount":1250
         },
         {
             "id": "top_ts_w_01",
@@ -165,7 +179,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230525,
+            "buycount":1110
         },
         {
             "id": "top_jacket_m_01",
@@ -179,7 +195,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230524,
+            "buycount":987
         },
         {
             "id": "top_jacket_m_02",
@@ -193,7 +211,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230522,
+            "buycount":881
         },
         {
             "id": "top_jacket_m_03",
@@ -207,7 +227,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230530,
+            "buycount":751
         },
         {
             "id": "top_jacket_m_04",
@@ -221,7 +243,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230521,
+            "buycount":491
         },
         {
             "id": "top_s_m_01",
@@ -235,7 +259,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230522,
+            "buycount":877
         },
         {
             "id": "top_s_m_02",
@@ -249,7 +275,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230512,
+            "buycount":551
         },
         {
             "id": "top_s_m_03",
@@ -263,7 +291,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230509,
+            "buycount":963
         },
         {
             "id": "top_s_m_04",
@@ -277,7 +307,9 @@
             "isOut": false,
             "isBest": true,
             "isNew": true,
-            "discountRate": 0
+            "discountRate": 0,
+            "date": 20230511,
+            "buycount":999
         }
     ],
     "itemList": [{
