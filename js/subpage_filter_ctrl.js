@@ -326,6 +326,11 @@ function addItem_filter(index) {
     Item.appendChild(desc_top);
     Item.appendChild(desc);
 
+    Item.setAttribute('data-date',queryResult.date);
+    Item.setAttribute('data-buycount',queryResult.buycount);
+    Item.setAttribute('data-price',queryResult.price);
+    Item.setAttribute('data-id',queryResult.id);
+
     items_list.appendChild(Item);
 
     item_url.addEventListener("click", function () {

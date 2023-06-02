@@ -1,0 +1,100 @@
+.find_tab_Area {
+    width: 615px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.find_tab_Area div {
+    width: 126px;
+    height: 45px;
+    border: 1px solid #555;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    line-height: 45px;
+    box-sizing: border-box;
+}
+
+.tab {
+    cursor: pointer;
+    user-select: none;
+}
+
+.tab_id {
+    border-right: none;
+    background-color: white;
+}
+
+.tab_pw {
+    background-color: #EEE;
+}
+
+.find_area {
+    width: 615px;
+    height: 335px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 45px;
+    background-color: white;
+    border: 1px solid #555;
+    border-top: none;
+}
+
+.find_pw_Area {
+    display: none;
+}
+
+.fakeline_findArea {
+    width: 615px;
+    height: 1px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.fakeline_findArea .fakeline_start {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    z-index: 100;
+    background-color: #555;
+}
+
+.fakeline_findArea .fakeline_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 126px;
+    height: 1px;
+    background-color: white;
+}
+
+.fakeline_findArea .fakeline_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 490px;
+    height: 1px;
+    background-color: #555;
+}
+
+
+.notice_box {
+    width: 615px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid #555;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    box-sizing: border-box;
+    padding: 64px 90px;
+}
+
+.notice_text>span {
+    font-size: 18px;
+    font-weight: bold;
+}
+

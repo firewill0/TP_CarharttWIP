@@ -108,6 +108,12 @@ function addItem(index) {
     Item.appendChild(desc_top);
     Item.appendChild(desc);
 
+    Item.setAttribute('data-date',shoppingList_Top[index].date);
+    Item.setAttribute('data-buycount',shoppingList_Top[index].buycount);
+    Item.setAttribute('data-price',shoppingList_Top[index].price);
+    Item.setAttribute('data-id',shoppingList_Top[index].id);
+    Item.setAttribute('data-idint',shoppingList_Top[index].idInt);
+
     items_list.appendChild(Item);
 
     item_url.addEventListener("click", function () {

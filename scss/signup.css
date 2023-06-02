@@ -1,0 +1,202 @@
+.common_select:focus {
+    outline: none;
+    border: 2px solid #4136BF;
+    box-sizing: border-box;
+}
+
+.signupSection {
+    width: 1245px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.signupSection .signupBox {
+    box-sizing: border-box;
+    padding-top: 42px;
+}
+
+.signupSection .signupBox .loginImg_logo {
+    width: 174px;
+    height: 47px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 30px;
+}
+
+.signupSection .signupBox h1 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.signupSection .signupBox>p {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.signupSection .signupBox>p>a {
+    text-decoration: underline;
+}
+
+.signupBox form {
+    width: 405px;
+    margin: 0 auto;
+}
+
+#input_id {
+    width: 300px;
+}
+
+.pwArea {
+    margin-bottom: 10px;
+}
+
+.btnIDChk {
+    margin-left: 11px;
+    width: 90px;
+    height: 45px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+}
+
+.text_warning {
+    font-size: 12px;
+    padding-left: 10px;
+    color: black;
+}
+
+.email_box {
+    display: flex;
+    align-items: center;
+}
+
+.email_box .inputDesign {
+    width: 130px;
+
+}
+
+.email_box p {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.email_com_id {
+    margin-left: 15px;
+    width: 105px;
+    height: 45px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    padding-left: 3px;
+
+}
+
+.fakeline {
+    display: block;
+    width: 405px;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 15px;
+}
+
+.box_common {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tel_box>.inputDesign {
+    width: 125px;
+}
+
+.gender_list_id {
+    width: 405px;
+    height: 45px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    padding-left: 3px;
+}
+
+.bd_select {
+    width: 125px;
+    height: 45px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    padding-left: 3px;
+}
+
+.chkArea {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.chkArea label {
+    font-size: 14px;
+    display: flex;
+}
+
+.chkArea p {
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.termsAreaCommon {
+    width: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+.termsAreaCommon.serviceTerms {
+    height: 205px;
+    background-color: white;
+}
+
+.termsAreaCommon.infoTerms {
+    height: 205px;
+    background-color: white;
+}
+
+.termsAreaCommon .terms_detail {
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    padding-top: 15px;
+    margin: 0 auto;
+    overflow-y: scroll;
+
+}
+
+.marketing {
+    margin-bottom: 45px;
+}
+
+.marketing .txt_marketing {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.btnLogin {
+    font-size: 16px;
+    font-weight: 600;
+}
