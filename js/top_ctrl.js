@@ -65,17 +65,17 @@ window.addEventListener('scroll', function () {
 });
 
 btn_sideTab_i.addEventListener('click',function(){
-    let chkicon = btn_sideTab_i.classList.contains('fa-chevron-circle-right');
+    let chkicon = btn_sideTab_i.classList.contains('fa-chevron-circle-left');
 
     if (chkicon) {
-        btn_sideTab_i.classList.add('fa-chevron-circle-left');
-        btn_sideTab_i.classList.remove('fa-chevron-circle-right');
-        recent_view.style.right = "-86px";
-    }
-    else {
         btn_sideTab_i.classList.add('fa-chevron-circle-right');
         btn_sideTab_i.classList.remove('fa-chevron-circle-left');
         recent_view.style.right = "0";
+    }
+    else {
+        btn_sideTab_i.classList.add('fa-chevron-circle-left');
+        btn_sideTab_i.classList.remove('fa-chevron-circle-right');
+        recent_view.style.right = "-86px";
     }
 });
 
