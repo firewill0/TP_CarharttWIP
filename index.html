@@ -48,18 +48,19 @@
 
 
             if (typeof (Storage) !== "undefined") {
-                // Code for localStorage/sessionStorage.
+                // webstorage 호환 브라우저
                 let rvlist_new = [];
                 sessionStorage.setItem("rvlist",JSON.stringify(rvlist_new));
                 console.log(sessionStorage.rvlist);
             } else {
-                // Sorry! No Web Storage support..
+                // Webstorage 미호환 브라우저
             }
         })
     </script>
 </head>
 
 <body>
+    <include src="./parts/search.html"></include>
     <include src="./parts/header.html"></include>
     <div class="swiper swiper-vm">
         <!-- Additional required wrapper -->
@@ -369,7 +370,6 @@
     </section>
 
     <include src="./parts/footer.html"></include>
-    <include src="./parts/btnTop.html"></include>
     <include src="./parts/recentView.html"></include>
     <a href="./welcome.html" class="welcome_dummy">dummy</a>
     <script>
@@ -395,10 +395,10 @@
                 el: '.swiper-scrollbar',
                 enabled: false,
             },
-            // autoplay: {
-            //     delay: 5000,
-            //     pauseOnMouseEnter: true,
-            // },
+            autoplay: {
+                delay: 5000,
+                pauseOnMouseEnter: true,
+            },
         });
 
         const swiper_best = new Swiper('.list_best', {

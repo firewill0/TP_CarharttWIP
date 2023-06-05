@@ -140,7 +140,9 @@ function sortItems(value, arr) {
     switch (value) {
         case "new":
 
-            sortArry_new = Array.prototype.slice.call(arr, 0);
+            // sortArry_new = Array.prototype.slice.call(arr, 0);
+
+            sortArry_new = Array.slice.call(arr, 0);
 
             sortArry_new.sort(function (a, b) {
                 let avalue = parseInt(a.dataset.date);

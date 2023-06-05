@@ -1,5 +1,13 @@
+
+let sideTab = document.querySelector('.sideTab');
 let top_btn = document.querySelector(".btnTopArea");
 let target = document.querySelector('.footer_mid_left');
+let btn_sideTab = document.querySelector('.btn_sideTab');
+let btn_sideTab_i = btn_sideTab.querySelector('i');
+let recent_view = document.querySelector('.recent_view');
+let recent_item = document.querySelectorAll('.recent_item');
+let items;
+
 let target_height = 0;
 let w = 0;
 let target_height_sub = 0;
@@ -16,7 +24,7 @@ function toggle(display, opacity) {
 }
 
 function moveTop(value) {
-    top_btn.style.bottom = value;
+    sideTab.style.top = value;
 }
 
 function isInViewport(element) {
@@ -48,9 +56,26 @@ window.addEventListener('scroll', function () {
     }
 
     if (isInViewport(target)) {
-        moveTop("330px");
+        moveTop("9%");
     } else {
-        moveTop("15px");
+        moveTop("50%");
     }
+    // 9%
 
 });
+
+btn_sideTab_i.addEventListener('click',function(){
+    let chkicon = btn_sideTab_i.classList.contains('fa-chevron-circle-right');
+
+    if (chkicon) {
+        btn_sideTab_i.classList.add('fa-chevron-circle-left');
+        btn_sideTab_i.classList.remove('fa-chevron-circle-right');
+        recent_view.style.right = "-86px";
+    }
+    else {
+        btn_sideTab_i.classList.add('fa-chevron-circle-right');
+        btn_sideTab_i.classList.remove('fa-chevron-circle-left');
+        recent_view.style.right = "0";
+    }
+});
+

@@ -91,7 +91,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230602,
     buycount: 450,
-    idInt: 0
+    idInt: 0,
+    category_primary:"top",
+    category_sub:"tshirt"
   },
   {
     id: "top_ts_m_02",
@@ -108,7 +110,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230601,
     buycount: 480,
-    idInt: 1
+    idInt: 1,
+    category_primary:"top",
+    category_sub:"tshirt"
   },
   {
     id: "top_ts_m_03",
@@ -125,7 +129,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230602,
     buycount: 240,
-    idInt: 2
+    idInt: 2,
+    category_primary:"top",
+    category_sub:"tshirt"
   },
   {
     id: "top_ts_m_04",
@@ -142,7 +148,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230531,
     buycount: 85,
-    idInt: 3
+    idInt: 3,
+    category_primary:"top",
+    category_sub:"tshirt"
   },
   {
     id: "top_s_w_01",
@@ -159,7 +167,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230528,
     buycount: 872,
-    idInt: 4
+    idInt: 4,
+    category_primary:"top",
+    category_sub:"shirt"
   },
   {
     id: "top_s_w_02",
@@ -176,7 +186,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230529,
     buycount: 650,
-    idInt: 5
+    idInt: 5,
+    category_primary:"top",
+    category_sub:"shirt"
   },
   {
     id: "top_jacket_w_01",
@@ -193,7 +205,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230524,
     buycount: 1250,
-    idInt: 6
+    idInt: 6,
+    category_primary:"top",
+    category_sub:"jacket"
   },
   {
     id: "top_ts_w_01",
@@ -210,7 +224,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230525,
     buycount: 1110,
-    idInt: 7
+    idInt: 7,
+    category_primary:"top",
+    category_sub:"tshirt"
   },
   {
     id: "top_jacket_m_01",
@@ -227,7 +243,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230524,
     buycount: 987,
-    idInt: 8
+    idInt: 8,
+    category_primary:"top",
+    category_sub:"jacket"
   },
   {
     id: "top_jacket_m_02",
@@ -244,7 +262,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230522,
     buycount: 881,
-    idInt: 9
+    idInt: 9,
+    category_primary:"top",
+    category_sub:"jacket"
   },
   {
     id: "top_jacket_m_03",
@@ -261,7 +281,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230530,
     buycount: 751,
-    idInt: 10
+    idInt: 10,
+    category_primary:"top",
+    category_sub:"jacket"
   },
   {
     id: "top_jacket_m_04",
@@ -278,7 +300,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230521,
     buycount: 491,
-    idInt: 11
+    idInt: 11,
+    category_primary:"top",
+    category_sub:"jacket"
   },
   {
     id: "top_s_m_01",
@@ -295,7 +319,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230522,
     buycount: 877,
-    idInt: 12
+    idInt: 12,
+    category_primary:"top",
+    category_sub:"shirt"
   },
   {
     id: "top_s_m_02",
@@ -312,7 +338,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230512,
     buycount: 551,
-    idInt: 13
+    idInt: 13,
+    category_primary:"top",
+    category_sub:"shirt"
   },
   {
     id: "top_s_m_03",
@@ -329,7 +357,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230509,
     buycount: 963,
-    idInt: 14
+    idInt: 14,
+    category_primary:"top",
+    category_sub:"shirt"
   },
   {
     id: "top_s_m_04",
@@ -346,7 +376,9 @@ const shoppingList_Top = [{
     discountRate: 0,
     date: 20230511,
     buycount: 999,
-    idInt: 15
+    idInt: 15,
+    category_primary:"top",
+    category_sub:"shirt"
   }
 ]
 

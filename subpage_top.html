@@ -29,9 +29,11 @@
 
     <script src="./js/top_ctrl.js" type="module"></script>
     <script src="./js/subpage_sort_ctrl.js" type="module"></script>
+    <script src="./js/top_ctrl.js" type="module"></script>
 </head>
 
 <body>
+    <include src="./parts/search.html"></include>
     <include src="./parts/header.html"></include>
     <div class="visual_sub">
         <div class="visual_sub_img top"></div>
@@ -50,12 +52,12 @@
                 TOP
             </div>
             <div class="subpage_left_cat">
-                <a href="#!">전체</a>
-                <a href="#!">자켓</a>
-                <a href="#!">스웨터</a>
-                <a href="#!">니트</a>
-                <a href="#!">셔츠</a>
-                <a href="#!">티셔츠</a>
+                <a href="./subpage_top.html?category_sub=all">전체</a>
+                <a href="./subpage_top.html?category_sub=jacket">자켓</a>
+                <a href="./subpage_top.html?category_sub=sweater">스웨터</a>
+                <a href="./subpage_top.html?category_sub=neat">니트</a>
+                <a href="./subpage_top.html?category_sub=shirt">셔츠</a>
+                <a href="./subpage_top.html?category_sub=tshirt">티셔츠</a>
                 <div class="line"></div>
             </div>
             <div class="subpage_left_filter">
@@ -197,7 +199,7 @@
         </div>
     </section>
     <include src="./parts/footer.html"></include>
-    <include src="./parts/btnTop.html"></include>
+    <include src="./parts/recentView.html"></include>
 </body>
 
 </html>
