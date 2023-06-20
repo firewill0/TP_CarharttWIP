@@ -33,14 +33,29 @@ let KrWon = new Intl.NumberFormat('ko-KR', {
     currency: 'KRW',
 });
 
+// let xhr = new XMLHttpRequest(); // 인스턴스 (객체변수보단 인스턴스라고 부르면 됨)
+// xhr.open('GET', './db.json');
+// xhr.send();
+
+// xhr.onreadystatechange = function () {
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//         console.log("READY");
+//         let datalist = JSON.parse(xhr.responseText);
+//         let items = datalist;
+//         showItem(items, itemId);
+//     }
+// }
+
 let xhr = new XMLHttpRequest(); // 인스턴스 (객체변수보단 인스턴스라고 부르면 됨)
-xhr.open('GET', './db.json');
+xhr.open('GET', 'https://api.jsonbin.io/v3/b/649130549d312622a372739a?meta=false');
+xhr.setRequestHeader("X-ACCESS-KEY", "$2b$10$pE7GTgaS/7K.wG3/9iP2reNPIUt2FUju1usLbHcrBbDFM.oUbnD/e");
 xhr.send();
 
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         console.log("READY");
         let datalist = JSON.parse(xhr.responseText);
+        console.log("JSON:",datalist);
         let items = datalist;
         showItem(items, itemId);
     }
