@@ -20,66 +20,6 @@
             "withItem": true,
             "withItemID": ["bottom_short_m_01"],
             "discountRate": 0
-            },
-            {
-                "id": "top_ts_m_02",
-                "name": "반팔 이노베이션 포켓 티셔츠",
-                "subname": "S/S INNOVATION POCKET T-SHIRT",
-                "stylecode": "CA23SSTSSS00040033",
-                "price": 85000,
-                "rating": 5,
-                "color": ["white"],
-                "colorSrc": [
-                    ["./img/top/top_ts_m_02/front_white.jpg", "./img/top/top_ts_m_02/back_white.jpg", "./img/top/top_ts_m_02/1.jpg", "./img/top/top_ts_m_02/2.jpg", "./img/top/top_ts_m_02/3.jpg", "./img/top/top_ts_m_02/4.jpg"]
-                ],
-                "desc": ["S/S INNOVATION POCKET T-SHIRT는 오가닉 코튼100% 싱글 저지 소재의 반팔 티셔츠입니다.", "", "- 세탁 및 다림 시 그래픽의 손상 및 변형이 생길 수 있으므로, 뒤집어 세탁 및 다림을 권장합니다."],
-                "size": ["S", "M","L","XL"],
-                "isOut": false,
-                "isBest": true,
-                "isNew": true,
-                "withItem": false,
-                "withItemID": [],
-                "discountRate": 0
-            },
-            {
-                "id": "top_ts_m_03",
-                "name": "반팔 버커루 티셔츠",
-                "subname": "S/S BUCKAROO T-SHIRT",
-                "stylecode": "CA23SSTSSS01020001",
-                "price": 78000,
-                "rating": 5,
-                "color": ["brown"],
-                "colorSrc": [
-                    ["./img/top/top_ts_m_03/front_brown.jpg", "./img/top/top_ts_m_03/back_brown.jpg", "./img/top/top_ts_m_03/1.jpg", "./img/top/top_ts_m_03/2.jpg", "./img/top/top_ts_m_03/3.jpg", "./img/top/top_ts_m_03/4.jpg"]
-                ],
-                "desc": ["S/S BUCKAROO T-SHIRT는 오가닉 코튼100% 싱글 저지 소재의 반팔 티셔츠입니다. 루즈 핏이며, 정면에 그래픽 프린트가 있습니다.", "", "- 세탁 및 다림 시 그래픽의 손상 및 변형이 생길 수 있으므로, 뒤집어 세탁 및 다림을 권장합니다."],
-                "size": ["S", "M", "L", "XL", "XXL"],
-                "isOut": false,
-                "isBest": true,
-                "isNew": true,
-                "withItem": false,
-                "withItemID": [],
-                "discountRate": 0
-            },
-            {
-                "id": "top_ts_m_04",
-                "name": "반팔 부기 티셔츠",
-                "subname": "S/S BOOGIE T-SHIRT",
-                "stylecode": "CA23SSTSSS11219001",
-                "price": 78000,
-                "rating": 5,
-                "color": ["yellow"],
-                "colorSrc": [
-                    ["./img/top/top_ts_m_04/front_yellow.jpg", "./img/top/top_ts_m_04/back_yellow.jpg", "./img/top/top_ts_m_04/1.jpg", "./img/top/top_ts_m_04/2.jpg", "./img/top/top_ts_m_04/3.jpg", "./img/top/top_ts_m_04/4.jpg"]
-                ],
-                "desc": ["S/S BOOGIE T-SHIRT는 오가닉 코튼100% 싱글 저지 소재의 반팔 티셔츠입니다. 루즈 핏이며, 정면에 그래픽 프린트가 있습니다.", "", "- 세탁 및 다림 시 그래픽의 손상 및 변형이 생길 수 있으므로, 뒤집어 세탁 및 다림을 권장합니다.", "- 워싱된 제품은 밝은 계열의 제품과 함께 착용 시 이염 발생할 수 있으며, 단독 세탁을 권장합니다."],
-                "size": ["S", "M", "L", "XL", "XXL"],
-                "isOut": false,
-                "isBest": true,
-                "isNew": false,
-                "withItem": false,
-                "withItemID": [],
-                "discountRate": 0
             }
         ]
     }
